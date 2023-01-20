@@ -331,6 +331,7 @@ p {
   color: #000000;
   font-size: 2rem;
   line-height: 2.5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contenedor {
@@ -358,7 +359,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.8rem;
+  font-size: 4.8rem;
 }
 
 h2 {
@@ -371,6 +372,20 @@ h3 {
 
 h4 {
   font-size: 2.6rem;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #fff100 2%, #ff8b00 10%, transparent 95%);
+  overflow-x: scroll;
 }
 
 .principal {
@@ -386,7 +401,7 @@ h4 {
     justify-content: space-between;
     align-items: center;
     margin: 20rem auto;
-    max-width: 120rem;
+    max-width: 180rem;
     width: 95%;
     gap: 10rem;
   }
@@ -399,6 +414,19 @@ h4 {
     padding-bottom: 2rem;
   }
 }
+.principal .linea-horizontal {
+  height: 0.4rem;
+  width: auto;
+  border: none;
+  background-color: #ff9f43;
+  margin: 0;
+  background: linear-gradient(to left, transparent, #ff9f43, transparent);
+}
 .principal p {
   text-align: center;
+  font-weight: 700;
+}
+
+.descripcion span {
+  color: #ff9f43;
 }

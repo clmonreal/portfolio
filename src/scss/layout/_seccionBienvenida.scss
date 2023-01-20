@@ -14,7 +14,7 @@
         align-items: center;
         
         margin: 20rem auto;
-        max-width: 120rem;
+        max-width: 180rem;
         width: 95%;
         gap: 10rem;
 
@@ -28,7 +28,21 @@
         } 
     }
 
+    .linea-horizontal {
+        height: .4rem;
+        width: auto;
+        border: none;
+        background-color: $naranja;
+        margin: 0;
+        background: linear-gradient(to left, transparent,$naranja, transparent);
+    }
+
     p {
         text-align: center;
+        font-weight: $bold;
     }
+}
+
+.descripcion span {
+    color: $naranja;
 }
