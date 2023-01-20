@@ -1,0 +1,34 @@
+
+.principal {
+    
+    margin: 20rem 0 20rem 0;
+    padding: 0 5rem;
+
+    .imagen {
+        display: none;
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        margin: 20rem auto;
+        max-width: 120rem;
+        width: 95%;
+        gap: 10rem;
+
+        .imagen {
+            width: 50rem;
+            height: 50rem;
+            display: block;
+            justify-content: center;
+            height: 100%;
+            padding-bottom: 2rem;
+        } 
+    }
+
+    p {
+        text-align: center;
+    }
+}

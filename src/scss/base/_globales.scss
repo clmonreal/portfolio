@@ -9,10 +9,14 @@ body {
     font-family: $fuente_principal;
     font-size: 1.6rem;
     line-height: 1.8;
+    background-image: linear-gradient(to bottom, #510d99 0%, #3b6abb 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 p {
     color: $negro;
     font-size: 2rem;
+    line-height: 2.5rem;
 }
 .contenedor {
     width: 95%;
@@ -35,7 +39,7 @@ h1, h2, h3 {
     margin: calc($separacion / 2) 0;
     font-weight: 300;
     text-align: center;
-    
+    line-height: 4rem; 
 }
 
 h1 {
