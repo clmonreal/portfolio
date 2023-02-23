@@ -4,22 +4,25 @@ html {
 }
 *, *:before, *:after {
     box-sizing: inherit;
+    text-align: center;
 }
 body {
-    font-family: $fuente_principal;
+    font-family: $primaryFont;
     font-size: 1.6rem;
     line-height: 1.8;
-    background-image: linear-gradient(to bottom, #510d99 0%, #3b6abb 100%);
+    // background-image: linear-gradient(to bottom, #510d99 0%, #3b6abb 100%);
+    // background-image: url(/src/img/background.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:    100%;
+    min-height: 100vh;
 }
 p {
-    color: $negro;
+    color: $blackFont;
     font-size: 2rem;
     line-height: 2.5rem;
-    font-family: $fuente_secundaria;
+    font-family: $secondaryFont;
 }
-.contenedor {
+.container {
     width: 95%;
     max-width: 120rem;
     margin: 0 auto;
@@ -32,12 +35,14 @@ a {
 img,
 picture {
     max-width: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
 h1, h2, h3 {
-    font-family: $fuente_principal;
-    margin: calc($separacion / 2) 0;
+    font-family: $primaryFont;
+    margin: calc($separation / 2) 0;
     font-weight: 300;
     text-align: center;
     line-height: 4rem; 
@@ -58,14 +63,4 @@ h4 {
 
 ::-webkit-scrollbar {
     width: 0;
-}
-
-.progressbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 5px;
-    border-radius: 10px;
-    background: linear-gradient(to top, #fff100 2%, #ff8b00 10%, transparent 95%);
-    overflow-x: scroll;
 }

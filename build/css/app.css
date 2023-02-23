@@ -316,25 +316,26 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  text-align: center;
 }
 
 body {
   font-family: "MADE Soulmaze", sans-serif;
   font-size: 1.6rem;
   line-height: 1.8;
-  background-image: linear-gradient(to bottom, #510d99 0%, #3b6abb 100%);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  min-height: 100vh;
 }
 
 p {
-  color: #000000;
+  color: 900;
   font-size: 2rem;
   line-height: 2.5rem;
   font-family: "Montserrat", sans-serif;
 }
 
-.contenedor {
+.container {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -347,6 +348,8 @@ a {
 img,
 picture {
   max-width: 100%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -378,55 +381,302 @@ h4 {
   width: 0;
 }
 
-.progressbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 5px;
-  border-radius: 10px;
-  background: linear-gradient(to top, #fff100 2%, #ff8b00 10%, transparent 95%);
-  overflow-x: scroll;
+/* HEADER */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
 }
-
-.principal {
-  margin: 20rem 0 20rem 0;
-  padding: 0 5rem;
+.header-content a {
+  color: #000000;
 }
-.principal .imagen {
-  display: none;
+.header-content img {
+  margin-left: 2rem;
+  width: 5%;
+  height: auto;
 }
-@media (min-width: 768px) {
-  .principal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20rem auto;
-    max-width: 180rem;
-    width: 95%;
-    gap: 10rem;
-  }
-  .principal .imagen {
-    width: 50rem;
-    height: 50rem;
-    display: block;
-    justify-content: center;
-    height: 100%;
-    padding-bottom: 2rem;
-  }
+.header-content .nav-bar {
+  display: flex;
+  gap: 4rem;
+  margin-right: 2rem;
 }
-.principal .linea-horizontal {
-  height: 0.4rem;
-  width: auto;
-  border: none;
+.header-content .underline {
+  display: inline-block;
+  position: relative;
+}
+.header-content .underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
   background-color: #ff9f43;
-  margin: 0;
-  background: linear-gradient(to left, transparent, #ff9f43, transparent);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-in-out;
 }
-.principal p {
-  text-align: center;
-  font-weight: 700;
+.header-content .underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
-.descripcion span {
-  color: #ff9f43;
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  grid-template-rows: repeat(2, auto);
+}
+.intro-section .title {
+  grid-column: 1/3;
+}
+.intro-section h3 {
+  grid-row: 2/3;
+  grid-column: 1/4;
+}
+.intro-section .intro-image {
+  display: flex;
+  justify-content: center;
+  grid-column: 3/4;
+}
+.intro-section .intro-image img {
+  width: 60%;
+  height: auto;
+  animation: move-image 3s ease-in-out infinite;
+}
+.intro-section span:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 7rem;
+  transition: font-size 0.2s;
+}
+
+@keyframes move-image {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.about-section {
+  background: #ff9f43;
+  padding: 15rem 20rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contenedor_tarjeta {
+  margin: 20px;
+}
+
+.contenedor_tarjeta a {
+  display: inline-block;
+}
+
+.contenedor_tarjeta:hover figure {
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.contenedor_tarjeta:hover figure img {
+  /* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */
+  filter: blur(2px);
+}
+
+figure {
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  transition: all ease 0.5s;
+  transform-style: preserve-3d;
+  /* Nota:
+  	Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+  	ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+  */
+  transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+
+figure .frontal {
+  display: block;
+  background: #000;
+  /* Podemos ocultar la imagen al dar la vuelta si lo queremos */
+  /*backface-visibility: hidden;*/
+}
+
+figure .trasera {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: #fff;
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  overflow: auto;
+}
+
+.contenedor_tarjeta:nth-child(1) figure .trasera {
+  background: rgba(223, 234, 241, 0.7);
+  background: -moz-linear-gradient(top, rgba(223, 234, 241, 0.7) 0%, rgb(15, 99, 144) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223, 234, 241, 0.7)), color-stop(100%, rgb(15, 99, 144)));
+  background: -webkit-linear-gradient(top, rgba(223, 234, 241, 0.7) 0%, rgb(15, 99, 144) 100%);
+  background: -o-linear-gradient(top, rgba(223, 234, 241, 0.7) 0%, rgb(15, 99, 144) 100%);
+  background: -ms-linear-gradient(top, rgba(223, 234, 241, 0.7) 0%, rgb(15, 99, 144) 100%);
+  background: linear-gradient(to bottom, rgba(223, 234, 241, 0.7) 0%, rgb(15, 99, 144) 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 ); */
+}
+
+.contenedor_tarjeta:nth-child(2) figure .trasera {
+  background: rgba(251, 232, 202, 0.7);
+  background: -moz-linear-gradient(top, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251, 232, 202, 0.7)), color-stop(100%, rgb(25, 44, 72)));
+  background: -webkit-linear-gradient(top, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
+  background: -o-linear-gradient(top, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
+  background: -ms-linear-gradient(top, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
+  background: linear-gradient(to bottom, rgba(251, 232, 202, 0.7) 0%, rgb(25, 44, 72) 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe8ca', endColorstr='#192c48', GradientType=0 ); */
+}
+
+.contenedor_tarjeta:nth-child(3) figure .trasera {
+  background: rgba(95, 58, 53, 0.7);
+  background: -moz-linear-gradient(top, rgba(95, 58, 53, 0.7) 0%, rgb(221, 32, 47) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(95, 58, 53, 0.7)), color-stop(100%, rgb(221, 32, 47)));
+  background: -webkit-linear-gradient(top, rgba(95, 58, 53, 0.7) 0%, rgb(221, 32, 47) 100%);
+  background: -o-linear-gradient(top, rgba(95, 58, 53, 0.7) 0%, rgb(221, 32, 47) 100%);
+  background: -ms-linear-gradient(top, rgba(95, 58, 53, 0.7) 0%, rgb(221, 32, 47) 100%);
+  background: linear-gradient(to bottom, rgba(95, 58, 53, 0.7) 0%, rgb(221, 32, 47) 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f3a35', endColorstr='#dd202f', GradientType=0 ); */
+}
+
+figure .trasera .titulo {
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+}
+
+figure .trasera hr {
+  height: 2px;
+  background: #fff;
+  border: none;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+figure .trasera p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 992px) {
+  figure .trasera {
+    /*position: relative;*/
+    backface-visibility: visible;
+    transform: perspective(600px) rotateY(0deg);
+  }
+  .contenedor_tarjeta:hover figure {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+.container-padding {
+  padding: 15rem 0;
+}
+
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid rgba(0, 0, 0, 0);
+  outline-offset: 0.6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.skills-container {
+  display: flex;
+  padding-bottom: 15rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  grid-template-columns: 6fr 1fr 6fr;
+}
+.skills-container .vertical-divider {
+  width: 0.3rem;
+  height: auto;
+  border-width: 0;
+  background-color: #000000;
+}
+
+.contact-container {
+  padding-bottom: 15rem;
+}
+
+.logo-contact-image {
+  display: flex;
+  justify-content: center;
+}
+.logo-contact-image img {
+  width: 5rem;
+  height: auto;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+.footer-logos img {
+  width: 10%;
 }

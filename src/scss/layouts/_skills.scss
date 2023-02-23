@@ -1,0 +1,14 @@
+.skills-container {
+    display: flex;
+    padding-bottom: 15rem;
+
+    @include grid(3, 2rem);
+    grid-template-columns: 6fr 1fr 6fr;
+
+    .vertical-divider {
+        width: .3rem;
+        height: auto;
+        border-width: 0;
+        background-color: $black;
+    }
+}
