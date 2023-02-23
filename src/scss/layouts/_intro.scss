@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15rem;
+    margin: 16% auto;
 
     @include grid(3, 2rem);
     grid-template-rows: repeat(2, auto);

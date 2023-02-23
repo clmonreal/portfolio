@@ -381,12 +381,12 @@ h4 {
   width: 0;
 }
 
-/* HEADER */
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 6rem;
+  margin-top: 2.5rem;
 }
 .header-content a {
   color: #000000;
@@ -426,7 +426,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15rem;
+  margin: 16% auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
