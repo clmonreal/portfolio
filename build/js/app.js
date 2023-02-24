@@ -50,3 +50,95 @@ window.addEventListener('scroll', function () {
   // introTitle.style.paddingLeft = value * 3 + 'px';
   // introImage.style.paddingRight = value * 3 + 'px';
 })
+
+//* 3D Effect Image Projects Section */
+const el1 = document.getElementsByClassName('project')[0];
+const height = el1.clientHeight;
+const width = el1.clientWidth;
+let yRotation = 0, xRotation = 0, string1 = '';
+let  string2 = `
+        perspective(500px)
+        scale(1)
+        rotateX(0)
+        rotateY(0)
+    `
+el1.addEventListener('mousemove', (evt) => {
+
+  const {layerX, layerY} = evt;
+
+  yRotation1 = (
+    (layerX - width / 2) / width
+  ) * 20;
+
+  xRotation1 = (
+    (layerY - height / 2) / height
+  ) * 20;
+
+  string1 = `
+        perspective(500px)
+        scale(1.1)
+        rotateX(${xRotation1}deg)
+        rotateY(${yRotation1}deg)
+    `
+
+  el1.style.transform = string1;
+});
+
+el1.addEventListener('mouseout', () => {
+
+
+  
+  el1.style.transform = string2;
+});
+
+const el2 = document.getElementsByClassName('project')[1];
+el2.addEventListener('mousemove', (evt) => {
+    const {layerX, layerY} = evt;
+
+    yRotation1 = (
+        (layerX - width / 2) / width
+    ) * 20;
+
+    xRotation1 = (
+        (layerY - height / 2) / height
+    ) * 20;
+
+    string1 = `
+        perspective(500px)
+        scale(1.1)
+        rotateX(${xRotation1}deg)
+        rotateY(${yRotation1}deg)
+    `
+
+    el2.style.transform = string1;
+});
+
+el2.addEventListener('mouseout', () => {
+    el2.style.transform = string2;
+});
+
+const el3 = document.getElementsByClassName('project')[2];
+el3.addEventListener('mousemove', (evt) => {
+    const {layerX, layerY} = evt;
+
+    yRotation1 = (
+        (layerX - width / 2) / width
+    ) * 20;
+
+    xRotation1 = (
+        (layerY - height / 2) / height
+    ) * 20;
+
+    string1 = `
+        perspective(500px)
+        scale(1.1)
+        rotateX(${xRotation1}deg)
+        rotateY(${yRotation1}deg)
+    `
+
+    el3.style.transform = string1;
+});
+
+el3.addEventListener('mouseout', () => {
+    el3.style.transform = string2;
+});
