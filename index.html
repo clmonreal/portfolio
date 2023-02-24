@@ -17,20 +17,23 @@
 
 <body>
     <header>
-        <div class="container header-content">
-            <img src="/src/img/logo.png" alt="Logo Image">
+        <nav class="header-content">
+            <a href="#">
+                <img src="/src/img/logo.png" alt="Logo Image">
+            </a>
             <div class="nav-bar">
                 <a class="underline" href="#">About</a>
                 <a class="underline" href="#">Projects</a>
+                <a class="underline" href="#">Experience</a>
                 <a class="underline" href="#">Skills</a>
                 <a class="underline" href="#">Contact</a>
             </div>
-        </div>
+        </nav>
     </header>
 
     <section class="container intro-section">
         <div class="title">
-            <h1><span>F</span><span>u</span><span>l</span><span>l</span><span>s</span><span>t</span><span>a</span><span>c</span><span>k</span>
+            <h1 ><span>F</span><span>u</span><span>l</span><span>l</span><span>s</span><span>t</span><span>a</span><span>c</span><span>k</span>
                 <span>W</span><span>e</span><span>b</span>
                 <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
             </h1>
@@ -44,7 +47,8 @@
     <section class="about-section">
         <div class="container">
             <h3>Hi, I'm Carlos. Nice to meet you.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt optio unde provident quia deleniti
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt optio unde
+                provident quia deleniti
                 minus, similique perspiciatis quibusdam, ea id excepturi nemo necessitatibus, adipisci totam iusto
                 asperiores? Tempore, illum?</p>
         </div>
@@ -55,7 +59,7 @@
             <div class="contenedor_tarjeta">
                 <a href="#">
                     <figure id="tarjeta">
-                        <img src="img/1.jpg" class="frontal" alt="">
+                        <img src="/src/img/1.png" class="frontal" alt="">
                         <figcaption class="trasera">
                             <h2 class="titulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, vero!</h2>
                             <hr>
@@ -69,7 +73,7 @@
             <div class="contenedor_tarjeta">
                 <a href="#">
                     <figure id="tarjeta">
-                        <img src="img/2.jpg" class="frontal" alt="">
+                        <img src="/src/img/2.jpg" class="frontal" alt="">
                         <figcaption class="trasera">
                             <h2 class="titulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, vero!</h2>
                             <hr>
@@ -83,7 +87,7 @@
             <div class="contenedor_tarjeta">
                 <a href="#">
                     <figure id="tarjeta">
-                        <img src="img/3.jpg" class="frontal" alt="">
+                        <img src="/src/img/3.jpg" class="frontal" alt="">
                         <figcaption class="trasera">
                             <h2 class="titulo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, vero!</h2>
                             <hr>
@@ -111,13 +115,27 @@
         <hr class="vertical-divider">
         <div class="skills">
             <h2>Skills</h2>
-            <p>
-                <li>Hola Mundo</li>
-                <li>Hola Mundo</li>
-                <li>Hola Mundo</li>
-                <li>Hola Mundo</li>
-                <li>Hola Mundo</li>
-            </p>
+            <div id="myCanvasContainer">
+                <canvas width="400" height="400" id="myCanvas">
+                    <p>Anything in here will be replaced on browsers that support the canvas element</p>
+                    <ul>
+                        <li><a href="#" target="_blank">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">SASS</a></li>
+                        <li><a href="#">Angular</a></li>
+                        <li><a href="#">Bootstrap</a></li>
+                        <li><a href="#">TypeScript</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Spring</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">Gulp</a></li>
+                        <li><a href="#">npm</a></li>
+                        <li><a href="#">Git</a></li>
+                    </ul>
+                </canvas>
+            </div>
         </div>
     </section>
 
@@ -125,7 +143,9 @@
         <div class="logo-contact-image">
             <img src="/src/img/logo.png" alt="Logo Image">
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sint rerum a quasi consectetur non dicta, magnam suscipit natus esse recusandae, porro, nihil vero illum temporibus tempora. Voluptas, cumque earum.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sint rerum a quasi consectetur non dicta,
+            magnam suscipit natus esse recusandae, porro, nihil vero illum temporibus tempora. Voluptas, cumque earum.
+        </p>
         <div class="media-icons">
             <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
             <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
@@ -145,6 +165,8 @@
         <p>Made with ❤️ by Carlos López.</p>
     </section>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="build/js/tagCanvas.js"></script>
     <script src="build/js/app.js"></script>
 </body>
 

@@ -317,6 +317,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -326,6 +327,8 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 p {
@@ -382,42 +385,47 @@ h4 {
 }
 
 .header-content {
+  width: 100%;
+  height: 6rem;
+  padding: 5rem;
+  background-color: #ff9f43;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
-  margin-top: 2.5rem;
-}
-.header-content a {
-  color: #000000;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  z-index: 999;
+  box-shadow: 0 0.2rem 1.5rem #333;
 }
 .header-content img {
   margin-left: 2rem;
-  width: 5%;
-  height: auto;
+  width: 7rem;
+  height: 5rem;
 }
 .header-content .nav-bar {
   display: flex;
   gap: 4rem;
   margin-right: 2rem;
 }
-.header-content .underline {
+.header-content .nav-bar .underline {
+  color: #000000;
   display: inline-block;
   position: relative;
 }
-.header-content .underline::after {
+.header-content .nav-bar .underline::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 0.2rem;
   bottom: 0;
   left: 0;
-  background-color: #ff9f43;
+  background-color: #000000;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.4s ease-in-out;
 }
-.header-content .underline:hover::after {
+.header-content .nav-bar .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -435,6 +443,9 @@ h4 {
 .intro-section .title {
   grid-column: 1/3;
 }
+.intro-section .title span {
+  line-height: 7rem;
+}
 .intro-section h3 {
   grid-row: 2/3;
   grid-column: 1/4;
@@ -443,17 +454,12 @@ h4 {
   display: flex;
   justify-content: center;
   grid-column: 3/4;
+  transform: translateY(-2rem);
 }
 .intro-section .intro-image img {
   width: 60%;
   height: auto;
   animation: move-image 3s ease-in-out infinite;
-}
-.intro-section span:hover {
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 7rem;
-  transition: font-size 0.2s;
 }
 
 @keyframes move-image {
@@ -657,6 +663,9 @@ figure .trasera p {
   border-width: 0;
   background-color: #000000;
 }
+.skills-container #myCanvasContainer {
+  margin-top: 4rem;
+}
 
 .contact-container {
   padding-bottom: 15rem;
@@ -678,5 +687,10 @@ figure .trasera p {
   margin-bottom: 5rem;
 }
 .footer-logos img {
-  width: 10%;
+  width: 5%;
+}
+.footer-logos img:hover {
+  transform: scale(1.5);
+  transition: transform 0.2s;
+  cursor: pointer;
 }

@@ -5,6 +5,12 @@
     margin-bottom: 5rem;
 
     img {
-        width: 10%;
+        width: 5%;
+
+        &:hover {
+            transform: scale(1.5);
+            transition: transform .2s;
+            cursor: pointer;
+        }
     }
 }
