@@ -27,15 +27,29 @@
         grid-column: 3 / 4;
         transform: translateY(-2rem);
         // transform: translateX(-5rem) translateY(-2rem);
-
+        
         img {
             width: 60%;
             height: auto;
             animation: move-image 3s ease-in-out infinite;
         }
     }
+    
+    .media-icons {
+        grid-column: 1 / 4;
+        
+        i {
+            margin: 5rem;
+            color: $orange;
+            font-size: 4rem;
+            transition: color .5s;
 
+        }
+        i:hover {
+            color: rgb(235, 138, 28);
+        }
 
+    }
 }
 
 @keyframes move-image {

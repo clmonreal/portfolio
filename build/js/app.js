@@ -14,6 +14,10 @@ window.addEventListener('scroll', function () {
   mainLocation = currentLocation;
 });
 
+//#================================//
+//#        SKILLS SECTION        //
+//#================================//
+
 //* TagCanvas */
 window.onload = function () {
   try {
@@ -33,26 +37,42 @@ window.onload = function () {
     TagCanvas.shuffleTags = true;
     TagCanvas.txtOpt = true;
     TagCanvas.Start('myCanvas');
+
+    let widthWindow = screen.width;
+    console.log(widthWindow);
+
   } catch (e) {
     // something went wrong, hide the canvas container
     document.getElementById('myCanvasContainer').style.display = 'none';
   }
 };
 
-//* Parallax Intro Section */
-// let introText = document.getElementById('intro-text');
-// let introTitle = document.getElementById('intro-section');
-// let introImage = document.getElementById('intro-image');
+// window.addEventListener('resize', function() {
+//   var screenWidth = window.innerWidth;
+//   console.log('Screen width: ' + screenWidth);
+// });
 
-window.addEventListener('scroll', function () {
-  let value = window.scrollY;
-  // introText.style.paddingLeft = value * 3 + 'px';
-  // introTitle.style.paddingLeft = value * 3 + 'px';
-  // introImage.style.paddingRight = value * 3 + 'px';
-})
+//* Parallax Intro Section */
+// let button = document.getElementById('container-button');
+
+// window.addEventListener('scroll', function () {
+//   let value = window.scrollY - 200;
+
+//   if (value >= 2200) {
+//     button.style.paddingLeft = (value - 2200) * 2 + 'px';
+//     button.style.opacity = 1 - ((value - 2200) * .0025);
+//   } else if (value < 2200) {
+//     button.style.paddingRight = (value - 2200) * 2 + 'px';
+//     button.style.opacity = 1;
+//   }
+// })
+
+//#================================//
+//#        PROJECTS SECTION        //
+//#================================//
 
 //* 3D Effect Image Projects Section */
-const el1 = document.getElementsByClassName('project')[0];
+const el1 = document.getElementsByClassName('img')[0];
 const height = el1.clientHeight;
 const width = el1.clientWidth;
 let yRotation = 0, xRotation = 0, string1 = '';
@@ -91,7 +111,7 @@ el1.addEventListener('mouseout', () => {
   el1.style.transform = string2;
 });
 
-const el2 = document.getElementsByClassName('project')[1];
+const el2 = document.getElementsByClassName('img')[1];
 el2.addEventListener('mousemove', (evt) => {
     const {layerX, layerY} = evt;
 
@@ -117,7 +137,7 @@ el2.addEventListener('mouseout', () => {
     el2.style.transform = string2;
 });
 
-const el3 = document.getElementsByClassName('project')[2];
+const el3 = document.getElementsByClassName('img')[2];
 el3.addEventListener('mousemove', (evt) => {
     const {layerX, layerY} = evt;
 
@@ -142,3 +162,24 @@ el3.addEventListener('mousemove', (evt) => {
 el3.addEventListener('mouseout', () => {
     el3.style.transform = string2;
 });
+
+//* Scroll Reveal Projects Section */
+ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+
+ScrollReveal().reveal('.intro-section h3', {delay: 600, origin: 'left'});
+ScrollReveal().reveal('.intro-section h1, .intro-section img', {delay: 400, origin: 'right'});
+ScrollReveal().reveal('.intro-section .media-icons i', {delay: 400, origin: 'bottom', interval: 200});
+ScrollReveal().reveal('.about-section h3', {delay: 500, origin: 'right'});
+ScrollReveal().reveal('.about-section p', {delay: 500, origin: 'left'});
+ScrollReveal().reveal('.projects-section .first-horizontal-line', {delay: 300, origin: 'left', distance: '300px', duration: 2000});
+ScrollReveal().reveal('.projects-section .second-horizontal-line', {delay: 300, origin: 'right', distance: '300px', duration: 2000});
+ScrollReveal().reveal('.projects-section .project, .projects-section p', {delay: 500, origin: 'bottom', interval: 400});
+ScrollReveal().reveal('.projects-container .container-button', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.skills-container .experience h2', {delay: 500, origin: 'left', reset: false});
+ScrollReveal().reveal('.skills-container .skills h2', {delay: 500, origin: 'right', reset: false});
+ScrollReveal().reveal('.skills-container .vertical-divider', {delay: 700, origin: 'bottom', distance: '300px', reset: false});

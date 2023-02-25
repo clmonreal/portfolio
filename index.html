@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="build/img/logo.webp">
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
 
     <section class="container intro-section">
         <div class="title">
-            <h1 ><span>F</span><span>u</span><span>l</span><span>l</span><span>s</span><span>t</span><span>a</span><span>c</span><span>k</span>
+            <h1><span>F</span><span>u</span><span>l</span><span>l</span><span>s</span><span>t</span><span>a</span><span>c</span><span>k</span>
                 <span>W</span><span>e</span><span>b</span>
                 <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
             </h1>
@@ -42,6 +43,13 @@
             <img src="/src/img/introAvatar.png" alt="Intro Image">
         </div>
         <h3>I enjoy coding and creating new projects</h3>
+        <div class="media-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
     </section>
 
     <section class="about-section">
@@ -54,31 +62,42 @@
         </div>
     </section>
 
-    <section class="container container-padding">
-        <div class="projects-container">
-            <a href="#">
-                <div class="project">
-                    <img src="/src/img/project1.png" alt="First Project Image">
-                </div>
-            </a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum deleniti porro temporibus.</p>
-            <hr>
-            <a href="#">
-                <div class="project">
-                    <img src="/src/img/project1.png" alt="Second Project Image">
-                </div>
-            </a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum deleniti porro temporibus.</p>
-            <hr>
-            <a href="#">
-                <div class="project">
-                    <img src="/src/img/project1.png" alt="Third Project Image">
-                </div>
-            </a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum deleniti porro temporibus.</p>
+    <section class="container projects-container">
+        <div class="projects-section">
+            <div class="project">
+                <a href="#">
+                    <img class="img" src="/src/img/project1.png" alt="First Project Image">
+                </a>
             </div>
-            <button class="button-89" role="button">View All</button>
-        </section>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                deleniti porro temporibus.</p>
+            <hr class="first-horizontal-line">
+            <div class="project">
+                <a href="#">
+                    <img class="img" src="/src/img/project1.png" alt="Second Project Image">
+                </a>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                deleniti porro temporibus.</p>
+            <hr class="second-horizontal-line">
+            <div class="project">
+                <a href="#">
+                    <img class="img" src="/src/img/project1.png" alt="Third Project Image">
+                </a>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                deleniti porro temporibus.</p>
+        </div>
+        <!-- <button class="button-89" role="button">View All</button> -->
+        <div class="container-button">
+            <a href="#" class="btn first-btn">
+                <span>View All</span>
+            </a>
+        </div>
+    </section>
 
     <section class="container skills-container">
         <div class="experience">
@@ -124,9 +143,26 @@
         <div class="logo-contact-image">
             <img src="/src/img/logo.png" alt="Logo Image">
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sint rerum a quasi consectetur non dicta,
-            magnam suscipit natus esse recusandae, porro, nihil vero illum temporibus tempora. Voluptas, cumque earum.
-        </p>
+        <div class="intro-contact-container">
+            <p>If you want to contact with me, you can do it by social media or filling the following form. In any case...</p>
+            <div class="contact-effect">
+                <h1>Contact me.&nbsp;&nbsp;<span>&nbsp;</span></h1>
+            </div>
+            <p>I will answer as soon as possible.</p>
+        </div>
+        <form class="contact-form">
+            <input type="text" name="name" id="name" placeholder="Introduce your name">
+            <input type="email" name="email" id="email" placeholder="Introduce your email">
+            <input type="text" name="issue" id="issue" placeholder="Introduce an issue">
+            <textarea name="message" id="message"></textarea>
+            <input type="submit" value="Send" id="button">
+        </form>
+    </section>
+    
+    <section class="container thanks-container">
+        <h2>Thanks for visit my website!</h2>
+        <a href="#">Contact me</a>
+        <p>You can also contact me through:</p>
         <div class="media-icons">
             <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
             <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
@@ -136,14 +172,18 @@
         </div>
     </section>
 
+    <hr>
+
     <section class="container footer-container">
-        <p>This site was developed using: </p>
-        <div class="footer-logos">
-            <img src="/src/img/htmlImage.png" alt="HTML Image">
-            <img src="/src/img/sassImage.png" alt="SASS Image">
-            <img src="/src/img/javascriptImage.png" alt="JavaScript Image">
+        <div class="footer-container-logos">
+            <div class="footer-logos">
+                <p>This site was developed using: </p>
+                <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
+                <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
+                <abbr title="JavaScript"><img src="/src/img/javascriptImage.png" alt="JavaScript Image"></abbr>
+            </div>
         </div>
-        <p>Made with ❤️ by Carlos López.</p>
+        <p class="last-sentence">Made with ❤️ by Carlos López.</p>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>

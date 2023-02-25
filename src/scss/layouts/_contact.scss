@@ -1,13 +1,94 @@
 .contact-container {
+    @include grid(2, 2rem);
+
     padding-bottom: 15rem;
 }
 
 .logo-contact-image {
     display: flex;
     justify-content: center;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
 
     img {
         width: 5rem;
         height: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+.intro-contact-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    
+    p {
+        text-align: left;
+    }
+}
+
+.contact-form {
+    grid-column: 2 / 3;
+
+    @include grid(2, 1.5rem);
+
+    #name {
+        grid-column: 1 / 2;
+    }
+
+    #email {
+        grid-column: 2 / 3;
+    }
+
+    #issue, textarea, #button  {
+        grid-column: 1 / 3;
+    }
+
+    input:not([type='submit']), textarea {
+        text-align: left;
+        padding-left: 1.5rem;
+        opacity: .5;
+        width: 100%;
+        height: 4rem;
+        background-color: transparent;
+        border: 1px solid $black;
+        border-radius: .4rem;
+    }
+
+    textarea {
+        height: 20rem;
+        max-width: 65rem;
+    }
+}
+
+.contact-effect {
+    display: table;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: $orange;
+    padding-left: 2rem;
+    border-radius: 1.2rem;
+
+    h1 {
+        float: left;
+        color: $black;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 0;
+            width: 0;
+            background: $orange;
+            border-left: 3.5px solid $black;
+            animation: machine 1.8s infinite alternate steps(25);
+        }
+    }
+}
+
+@keyframes machine {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
     }
 }
