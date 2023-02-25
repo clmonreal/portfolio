@@ -27,6 +27,7 @@
 }
 
 .contact-form {
+    margin-top: 2rem;
     grid-column: 2 / 3;
 
     @include grid(2, 1.5rem);
