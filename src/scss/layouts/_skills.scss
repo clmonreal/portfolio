@@ -14,5 +14,9 @@
 
     #myCanvasContainer {
         margin-top: 4rem;
+
+        canvas {
+            aspect-ratio: auto 500 / 500;
+        }
     }
 }

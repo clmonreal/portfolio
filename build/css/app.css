@@ -321,10 +321,11 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "MADE Soulmaze", sans-serif;
   font-size: 1.6rem;
   line-height: 1.8;
-  background-repeat: no-repeat;
   background-size: 100%;
   min-height: 100vh;
   overflow-y: scroll;
@@ -384,6 +385,204 @@ h4 {
   width: 0;
 }
 
+.bubbles {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.bubbles div {
+  position: absolute;
+  background: #3a3c3c;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20rem;
+  animation: animatedBubbles 4s linear infinite;
+}
+
+.bubbles div:nth-child(1) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 10%;
+  animation-duration: 4s;
+}
+
+.bubbles div:nth-child(2) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 25%;
+  animation-duration: 9s;
+}
+
+.bubbles div:nth-child(3) {
+  width: 0.5rem;
+  height: 0.2rem;
+  left: 90%;
+  animation-duration: 10s;
+}
+
+.bubbles div:nth-child(4) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 65%;
+  animation-duration: 6s;
+}
+
+.bubbles div:nth-child(5) {
+  width: 0.5rem;
+  height: 0.2rem;
+  left: 30%;
+  animation-duration: 8s;
+}
+
+.bubbles div:nth-child(6) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 80%;
+  animation-duration: 7.3s;
+}
+
+.bubbles div:nth-child(7) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 13%;
+  animation-duration: 8.3s;
+}
+
+.bubbles div:nth-child(8) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 35%;
+  animation-duration: 9s;
+}
+
+.bubbles div:nth-child(9) {
+  width: 0.5rem;
+  height: 0.2rem;
+  left: 95%;
+  animation-duration: 10s;
+}
+
+.bubbles div:nth-child(10) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 75%;
+  animation-duration: 6s;
+}
+
+.bubbles div:nth-child(11) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 8%;
+  animation-duration: 8s;
+}
+
+.bubbles div:nth-child(12) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 73%;
+  animation-duration: 6.1s;
+}
+
+.bubbles div:nth-child(13) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 15%;
+  animation-duration: 9.4s;
+}
+
+.bubbles div:nth-child(14) {
+  width: 0.5rem;
+  height: 0.2rem;
+  left: 43%;
+  animation-duration: 9s;
+}
+
+.bubbles div:nth-child(15) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 82%;
+  animation-duration: 10s;
+}
+
+.bubbles div:nth-child(16) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 17%;
+  animation-duration: 6s;
+}
+
+.bubbles div:nth-child(17) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 33%;
+  animation-duration: 8s;
+}
+
+.bubbles div:nth-child(18) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 62%;
+  animation-duration: 4.6s;
+}
+
+.bubbles div:nth-child(19) {
+  width: 0.5rem;
+  height: 0.2rem;
+  left: 15%;
+  animation-duration: 4.1s;
+}
+
+.bubbles div:nth-child(20) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 20%;
+  animation-duration: 4.9s;
+}
+
+.bubbles div:nth-child(21) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 58%;
+  animation-duration: 4.2s;
+}
+
+.bubbles div:nth-child(22) {
+  width: 1.5rem;
+  height: 1.2rem;
+  left: 55%;
+  animation-duration: 7s;
+}
+
+.bubbles div:nth-child(23) {
+  width: 2.5rem;
+  height: 2.2rem;
+  left: 48%;
+  animation-duration: 5s;
+}
+
+@keyframes animatedBubbles {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    margin-left: 1rem;
+  }
+  50% {
+    opacity: 0.5;
+    margin-left: -0.5rem;
+  }
+  75% {
+    margin-left: 0.5rem;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0.1;
+  }
+}
 .header-content {
   width: 100%;
   height: 6rem;
@@ -559,6 +758,9 @@ h4 {
 }
 .skills-container #myCanvasContainer {
   margin-top: 4rem;
+}
+.skills-container #myCanvasContainer canvas {
+  aspect-ratio: auto 500/500;
 }
 
 .contact-container {

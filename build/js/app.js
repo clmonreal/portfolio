@@ -24,57 +24,21 @@ window.onload = function () {
     TagCanvas.textColour = '#000';
     TagCanvas.maxSpeed = .1;
     TagCanvas.outlineColour = 'transparent';
-    TagCanvas.radiusX = window.innerWidth * .0008;
-    TagCanvas.radiusY = window.innerWidth * .0008;
-    TagCanvas.radiusZ = window.innerWidth * .0008;
+    TagCanvas.radiusX = 1;
+    TagCanvas.radiusY = 1;
+    TagCanvas.radiusZ = 1;
     TagCanvas.wheelZoom = false;
     TagCanvas.textHeight = 20;
     TagCanvas.reverse = true;
     TagCanvas.shuffleTags = true;
     TagCanvas.txtOpt = true;
-    // TagCanvas.outlineColour = 'transparent';
-    // TagCanvas.shadow = '#000';
-    // TagCanvas.shadowBlur = 20;
-    // TagCanvas.shadowOffset = [3, 3];
+    TagCanvas.activeCursor = 'default';
     TagCanvas.Start('myCanvas');
-
-    window.addEventListener('resize', function () {
-      let screenWidth = window.innerWidth;
-      TagCanvas.textColour = '#000';
-      TagCanvas.maxSpeed = .1;
-      TagCanvas.outlineColour = 'transparent';
-      TagCanvas.radiusX = screenWidth * .0008;
-      TagCanvas.radiusY = screenWidth * .0008;
-      TagCanvas.radiusZ = screenWidth * .0008;
-
-      TagCanvas.wheelZoom = false;
-      TagCanvas.textHeight = 20;
-      TagCanvas.reverse = true;
-      TagCanvas.shuffleTags = true;
-      TagCanvas.txtOpt = true;
-      TagCanvas.Start('myCanvas');
-    });
   } catch (e) {
     // something went wrong, hide the canvas container
     document.getElementById('myCanvasContainer').style.display = 'none';
   }
 };
-
-
-//* Parallax Intro Section */
-// let button = document.getElementById('container-button');
-
-// window.addEventListener('scroll', function () {
-//   let value = window.scrollY - 200;
-
-//   if (value >= 2200) {
-//     button.style.paddingLeft = (value - 2200) * 2 + 'px';
-//     button.style.opacity = 1 - ((value - 2200) * .0025);
-//   } else if (value < 2200) {
-//     button.style.paddingRight = (value - 2200) * 2 + 'px';
-//     button.style.opacity = 1;
-//   }
-// })
 
 //#================================//
 //#        PROJECTS SECTION        //
@@ -172,7 +136,10 @@ el3.addEventListener('mouseout', () => {
   el3.style.transform = string2;
 });
 
-//* Scroll Reveal Projects Section */
+//#================================//
+//#         SCROLL REVEAL          //
+//#================================//
+
 ScrollReveal({
   reset: true,
   distance: '60px',

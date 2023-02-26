@@ -8,18 +8,17 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    margin: 0;
+    padding: 0;
     font-family: $primaryFont;
     font-size: 1.6rem;
     line-height: 1.8;
-    // background-image: linear-gradient(to left, #f7df9a 0%, #f89c23 100%);
-    // background: #c4dff8;
-    // background-image: url(/src/img/background.png);
-    background-repeat: no-repeat;
     background-size:    100%;
     min-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
 p {
     color: $blackFont;
     font-size: 2rem;
