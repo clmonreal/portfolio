@@ -15,7 +15,7 @@ window.addEventListener('scroll', function () {
 });
 
 //#================================//
-//#        SKILLS SECTION        //
+//#          SKILLS SECTION        //
 //#================================//
 
 //* TagCanvas */
@@ -28,7 +28,7 @@ window.onload = function () {
     TagCanvas.radiusY = 1;
     TagCanvas.radiusZ = 1;
     TagCanvas.wheelZoom = false;
-    TagCanvas.textHeight = 20;
+    TagCanvas.textHeight = 15;
     TagCanvas.reverse = true;
     TagCanvas.shuffleTags = true;
     TagCanvas.txtOpt = true;
