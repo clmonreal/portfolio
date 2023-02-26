@@ -1,0 +1,66 @@
+.experience-container {
+    display: flex;
+    justify-content: center;
+    margin: 25rem auto;
+    
+    .job {
+        width: 100%;
+        margin-right: 1.5rem;
+        display: block;
+
+        .graphic-view {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            hr {
+                width: 100%;
+                height: .1rem;
+                border: none;
+                background: $black;
+                margin-left: 1.5rem;
+            }
+
+            .job-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                svg {
+                    padding: .8rem;
+                    width: 4rem;
+                    height: 4rem;
+                    background: $orange;
+                    border-radius: 50%;
+                    
+                }
+            }
+        }
+    }
+}
+
+.experience-container {
+    .description {
+
+        float: left;
+        margin-top: 1rem;
+        
+
+        h4, p {
+            text-align: left;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+
+            &:last-child {
+                font-weight: $boldFont;
+            }
+        }
+    }
+}

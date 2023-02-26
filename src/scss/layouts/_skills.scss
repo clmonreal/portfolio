@@ -1,19 +1,24 @@
 .skills-container {
-    display: flex;
-    padding-bottom: 15rem;
+    margin: 10rem auto;
 
-    @include grid(3, 2rem);
-    grid-template-columns: 6fr 1fr 6fr;
+    .skills {
+        margin-top: 4rem;
+        @include grid(2, 4rem);
+        text-align: center;
+        align-items: center;
 
-    .vertical-divider {
-        width: .3rem;
-        height: auto;
-        border-width: 0;
-        background-color: $black;
+        p, h2 {
+            text-align: left;
+        }
+
+        span:hover {
+            color: $orange;
+            transition: color .2s;
+            cursor: default;
+        }
     }
 
     #myCanvasContainer {
-        margin-top: 4rem;
 
         canvas {
             aspect-ratio: auto 500 / 500;

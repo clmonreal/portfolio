@@ -33,6 +33,7 @@ window.onload = function () {
     TagCanvas.shuffleTags = true;
     TagCanvas.txtOpt = true;
     TagCanvas.activeCursor = 'default';
+    TagCanvas.initial = [.05, -.1];
     TagCanvas.Start('myCanvas');
   } catch (e) {
     // something went wrong, hide the canvas container
@@ -155,7 +156,10 @@ ScrollReveal().reveal('.about-section p', { delay: 500, origin: 'left' });
 ScrollReveal().reveal('.projects-section .first-horizontal-line', { delay: 300, origin: 'left', distance: '300px', duration: 2000 });
 ScrollReveal().reveal('.projects-section .second-horizontal-line', { delay: 300, origin: 'right', distance: '300px', duration: 2000 });
 ScrollReveal().reveal('.projects-section .project, .projects-section p', { delay: 500, origin: 'bottom', interval: 400 });
-ScrollReveal().reveal('.projects-container .container-button', { delay: 600, origin: 'bottom' });
+ScrollReveal().reveal('.projects-container .container-button, .skills-description', { delay: 600, origin: 'bottom' });
 ScrollReveal().reveal('.skills-container .experience h2', { delay: 500, origin: 'left', reset: false });
 ScrollReveal().reveal('.skills-container .skills h2', { delay: 500, origin: 'right', reset: false });
 ScrollReveal().reveal('.skills-container .vertical-divider', { delay: 700, origin: 'bottom', distance: '300px', reset: false });
+ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { delay: 600, origin: 'left' });
+ScrollReveal().reveal('.experience-container .description', { delay: 600, origin: 'right' });
+ScrollReveal().reveal('#myCanvasContainer', { delay: 1000, distance: '0' });
