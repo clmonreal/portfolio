@@ -138,7 +138,7 @@ el3.addEventListener('mouseout', () => {
 });
 
 //#================================//
-//#         SCROLL REVEAL          //
+//#   SCROLL REVEAL ALL SECTIONS   //
 //#================================//
 
 ScrollReveal({
@@ -148,9 +148,10 @@ ScrollReveal({
   delay: 400
 });
 
-ScrollReveal().reveal('.intro-section h3', { delay: 600, origin: 'left' });
-ScrollReveal().reveal('.intro-section h1, .intro-section img', { delay: 400, origin: 'right' });
-ScrollReveal().reveal('.intro-section .media-icons i', { delay: 400, origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.intro-section h3, .intro-contact-container', { delay: 600, origin: 'left' });
+ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form', { delay: 400, origin: 'right' });
+ScrollReveal().reveal('.media-icons i', { delay: 400, origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.thanks-container h2, .thanks-container p, .thanks-button-container, .logo-contact-image', { delay: 300, origin: 'bottom', interval: 200 });
 ScrollReveal().reveal('.about-section h3', { delay: 500, origin: 'right' });
 ScrollReveal().reveal('.about-section p', { delay: 500, origin: 'left' });
 ScrollReveal().reveal('.projects-section .first-horizontal-line', { delay: 300, origin: 'left', distance: '300px', duration: 2000 });
@@ -163,3 +164,42 @@ ScrollReveal().reveal('.skills-container .vertical-divider', { delay: 700, origi
 ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { delay: 600, origin: 'left' });
 ScrollReveal().reveal('.experience-container .description', { delay: 600, origin: 'right' });
 ScrollReveal().reveal('#myCanvasContainer', { delay: 1000, distance: '0' });
+
+//#================================//
+//#         CONTACT SECTION        //
+//#================================//
+const $form = document.querySelector('.contact-form');
+$form.addEventListener('submit', handleSubmit);
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = new FormData(this);
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    header: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok) {
+    const newElement = document.createElement("p");
+    newElement.classList.add("popup-message");
+    newElement.textContent = "The message has been sent successfully!";
+    document.querySelector(".contact-form").appendChild(newElement);
+    $form.reset();
+
+    setTimeout(function() {
+      newElement.remove();
+    }, 4000);
+  }
+}
+
+//#================================//
+//#          FOOTER SECTION        //
+//#================================//
+let yearElement = document.getElementById('year');
+let currentYear = new Date().getFullYear();
+yearElement.textContent = currentYear;
+

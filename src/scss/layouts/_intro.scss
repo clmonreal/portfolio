@@ -42,11 +42,10 @@
             margin: 5rem;
             color: $orange;
             font-size: 4rem;
-            transition: color .5s;
-
+            transition: scale .5s;
         }
         i:hover {
-            color: rgb(235, 138, 28);
+            scale: 1.2;
         }
 
     }

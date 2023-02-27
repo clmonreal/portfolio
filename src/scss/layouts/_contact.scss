@@ -24,6 +24,26 @@
     p {
         text-align: left;
     }
+
+    .contact-email {
+        
+        a {
+            width: fit-content;
+            font-weight: $boldFont;
+            color: $black;
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+    
+            p {
+                margin: 0 0 0 1rem;
+            }
+        }
+    }
 }
 
 .contact-form {
@@ -43,8 +63,10 @@
     #issue, textarea, #button  {
         grid-column: 1 / 3;
     }
-
+    
     input:not([type='submit']), textarea {
+        font-family: $secondaryFont;
+        font-weight: $boldFont;
         text-align: left;
         padding-left: 1.5rem;
         opacity: .5;
@@ -58,7 +80,22 @@
     textarea {
         height: 20rem;
         max-width: 65rem;
+        min-height: 15rem;
         resize: vertical;
+    }
+
+    input[type='submit'] {
+        background: $orange;
+        border: none;
+        padding: 2rem;
+        border-radius: 1rem;
+        font-size: 2rem;
+
+        &:hover {
+            scale: 1.05;
+            transition: scale .2s;
+            cursor: pointer;
+        }
     }
 }
 
@@ -93,4 +130,15 @@
     to {
         width: 0;
     }
+}
+
+.popup-message {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    grid-column: 1 / 3;
+    border-radius: .5rem;
+    background: rgb(114, 211, 85);
+    margin: 0;
 }
