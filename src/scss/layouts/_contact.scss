@@ -1,19 +1,21 @@
 .contact-container {
     @include grid(2, 2rem);
 
-    padding-bottom: 15rem;
+    // padding-bottom: 15rem;
+    margin: 5rem auto 15rem auto;
 }
 
-.logo-contact-image {
+.horizontal-line {
     display: flex;
     justify-content: center;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-
-    img {
-        width: 5rem;
-        height: auto;
-        margin-bottom: 2rem;
+    
+    hr {
+        width: 100%;
+        height: .1rem;
+        border: none;
+        background: $black;
     }
 }
 

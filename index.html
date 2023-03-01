@@ -55,7 +55,7 @@
     <header>
         <nav class="header-content">
             <a href="#">
-                <img src="/src/img/logo.png" alt="Logo Image">
+                <h1>&lt;/&gt; clmonreal</h1>
             </a>
             <div class="nav-bar">
                 <a class="underline" href="#about-container">About</a>
@@ -75,7 +75,11 @@
             </h1>
         </div>
         <div class="intro-image">
-            <img src="/src/img/introAvatar.png" alt="Intro Image">
+            <picture>
+                <source srcset="build/img/introAvatar.avif" type="image/avif">
+                <source srcset="build/img/introAvatar.webp" type="image/webp">
+                <img loading="lazy" src="build/img/introAvatar.png" alt="Intro Image">
+            </picture>
         </div>
         <h3>I enjoy coding and creating new projects</h3>
         <div class="media-icons">
@@ -89,8 +93,10 @@
     <section class="about-section" id="about-container">
         <div class="container about-container">
             <h3>Hi, I'm Carlos. Nice to meet you.</h3>
-            <p class="about-container-first-text">I have really passion for web development, giving priority to coding with best practices, good user
-                interaction and fast load times. Always responsive sites and paying attention to make as non static web as
+            <p class="about-container-first-text">I have really passion for web development, giving priority to coding
+                with best practices, good user
+                interaction and fast load times. Always responsive sites and paying attention to make as non static web
+                as
                 possible, I love making pages come to life.</p>
             <div class="CV-container">
                 <a class="CV-elements" href="/CV-carlos.pdf" download="CV-carloslopez">
@@ -110,47 +116,67 @@
         <div class="projects-section">
             <div class="project">
                 <a href="https://clmonreal.github.io/carlosProjectApp" target="_blank">
-                    <img class="img" src="/src/img/project1.png" alt="First Project Image">
+                    <picture>
+                        <source srcset="build/img/project1.avif" type="image/avif">
+                        <source srcset="build/img/project1.webp" type="image/webp">
+                        <img class="img" src="build/img/project1.png" alt="First Image">
+                    </picture>
                 </a>
             </div>
             <div class="project-description">
                 <h1>Carlog - Carlos Project Application</h1>
-                <p>This Angular Login Web Application includes Lazy Loading, Guards, Responsive Design, Interfaces, Generic Types, and Authentication and Security Systems. The app needs to connect to an API called <a href="https://reqres.in/" target="_blank">Reqres</a>, in order to obtain users data. For more information, visit the <a href="https://github.com/clmonreal/carlosProjectApp" target="_blank">project repository</a>.</p>
+                <p>This Angular Login Web Application includes Lazy Loading, Guards, Responsive Design, Interfaces,
+                    Generic Types, and Authentication and Security Systems. The app needs to connect to an API called <a
+                        href="https://reqres.in/" target="_blank">Reqres</a>, in order to obtain users data. For more
+                    information, visit the <a href="https://github.com/clmonreal/carlosProjectApp"
+                        target="_blank">project repository</a>.</p>
                 <div class="project-tools">
-                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
-                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
-                    <abbr title="TypeScript"><img src="/src/img/typescriptImage.png" alt="TypeScript Image"></abbr>
-                    <abbr title="Angular"><img src="/src/img/AngularImage.png" alt="Angular Image"></abbr>
+                    <abbr title="HTML5"><img src="/build/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/build/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="TypeScript"><img src="/build/img/typescriptImage.png" alt="TypeScript Image"></abbr>
+                    <abbr title="Angular"><img src="/build/img/AngularImage.png" alt="Angular Image"></abbr>
                 </div>
             </div>
             <hr class="first-horizontal-line">
             <div class="project">
                 <a href="#" target="_blank">
-                    <img class="img" src="/src/img/project2.png" alt="Second Project Image">
+                    <picture>
+                        <source srcset="build/img/project2.avif" type="image/avif">
+                        <source srcset="build/img/project2.webp" type="image/webp">
+                        <img class="img" src="build/img/project2.png" alt="Second Image">
+                    </picture>
                 </a>
             </div>
             <div class="project-description">
                 <h1>Real Estate Application</h1>
-                <p>Designed with POO paradigm, the Real Estate Application uses MySQL as Data Base Manager System. It allows to login and register with different roles, so that only authorized users have access to a specific content. Administrator users can manage the content of the page using CRUD operations.</p>
+                <p>Designed with POO paradigm, the Real Estate Application uses MySQL as Data Base Manager System. It
+                    allows to login and register with different roles, so that only authorized users have access to a
+                    specific content. Administrator users can manage the content of the page using CRUD operations.</p>
                 <div class="project-tools">
-                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
-                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
-                    <abbr title="PHP"><img src="/src/img/PHPImage.png" alt="PHP Image"></abbr>
+                    <abbr title="HTML5"><img src="/build/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/build/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="PHP"><img src="/build/img/PHPImage.png" alt="PHP Image"></abbr>
                 </div>
             </div>
             <hr class="second-horizontal-line">
             <div class="project">
                 <a href="https://festivalmusicacarlos18.netlify.app" target="_blank">
-                    <img class="img" src="/src/img/project3.png" alt="Third Project Image">
+                    <picture>
+                        <source srcset="build/img/project3.avif" type="image/avif">
+                        <source srcset="build/img/project3.webp" type="image/webp">
+                        <img class="img" src="build/img/project3.png" alt="Third Image">
+                    </picture>
                 </a>
             </div>
             <div class="project-description">
                 <h1>Music Festival Application</h1>
-                <p>In this Web Site we can visualize the program of a Music Festival, concert schedules and several photos of the musicians. It's designed with JavaScript especially for manage and minimize the photos and other web site effects.</p>
+                <p>In this Web Site we can visualize the program of a Music Festival, concert schedules and several
+                    photos of the musicians. It's designed with JavaScript especially for manage and minimize the photos
+                    and other web site effects.</p>
                 <div class="project-tools">
-                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
-                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
-                    <abbr title="JavaScript"><img src="/src/img/javascriptImage.png" alt="JavaScript Image"></abbr>
+                    <abbr title="HTML5"><img src="/build/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/build/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="JavaScript"><img src="/build/img/javascriptImage.png" alt="JavaScript Image"></abbr>
                 </div>
             </div>
         </div>
@@ -245,9 +271,7 @@
     </section>
 
     <section class="container contact-container" id="contact-container">
-        <div class="logo-contact-image">
-            <img src="/src/img/logo.png" alt="Logo Image">
-        </div>
+        <div class="horizontal-line"></div>
         <div class="intro-contact-container">
             <p>If you want to contact with me, you can do it by social media or filling the following form. In any
                 case...</p>
@@ -297,9 +321,9 @@
         <div class="footer-container-logos">
             <div class="footer-logos">
                 <p>This site was developed using: </p>
-                <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
-                <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
-                <abbr title="JavaScript"><img src="/src/img/javascriptImage.png" alt="JavaScript Image"></abbr>
+                <abbr title="HTML5"><img src="/build/img/htmlImage.png" alt="HTML Image"></abbr>
+                <abbr title="SASS"><img src="/build/img/sassImage.png" alt="SASS Image"></abbr>
+                <abbr title="JavaScript"><img src="/build/img/javascriptImage.png" alt="JavaScript Image"></abbr>
             </div>
         </div>
         <p class="last-sentence">Copyright © <span id="year"></span> - All rights reserved | Made with ❤️ by Carlos
