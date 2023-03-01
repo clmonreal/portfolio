@@ -153,16 +153,16 @@ ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form, .pr
 ScrollReveal().reveal('.media-icons i', { delay: 400, origin: 'bottom', interval: 200 });
 ScrollReveal().reveal('.thanks-container h2, .thanks-container p, .thanks-button-container, .logo-contact-image', { delay: 300, origin: 'bottom', interval: 200 });
 ScrollReveal().reveal('.about-section h3', { delay: 500, origin: 'right' });
-ScrollReveal().reveal('.about-section p', { delay: 500, origin: 'left' });
+ScrollReveal().reveal('.about-section .about-container-first-text', { delay: 500, origin: 'left' });
 ScrollReveal().reveal('.projects-section .first-horizontal-line', { delay: 300, origin: 'left', distance: '300px', duration: 2000 });
 ScrollReveal().reveal('.projects-section .second-horizontal-line', { delay: 300, origin: 'right', distance: '300px', duration: 2000 });
 ScrollReveal().reveal('.projects-container .container-button, .skills-description', { delay: 600, origin: 'bottom' });
 ScrollReveal().reveal('.skills-container .experience h2', { delay: 500, origin: 'left', reset: false });
 ScrollReveal().reveal('.skills-container .skills h2', { delay: 500, origin: 'right', reset: false });
-ScrollReveal().reveal('.skills-container .vertical-divider', { delay: 700, origin: 'bottom', distance: '300px', reset: false });
 ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { delay: 600, origin: 'left' });
 ScrollReveal().reveal('.experience-container .description', { delay: 600, origin: 'right' });
-ScrollReveal().reveal('#myCanvasContainer', { delay: 1000, distance: '0' });
+ScrollReveal().reveal('#myCanvasContainer, .about-section .CV-elements', { delay: 1000, distance: '0' });
+ScrollReveal().reveal('.projects-container h2, .experience-section h2', { delay: 300, origin: 'bottom'});
 
 //#================================//
 //#         CONTACT SECTION        //
