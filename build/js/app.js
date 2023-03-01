@@ -148,15 +148,14 @@ ScrollReveal({
   delay: 400
 });
 
-ScrollReveal().reveal('.intro-section h3, .intro-contact-container', { delay: 600, origin: 'left' });
-ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form', { delay: 400, origin: 'right' });
+ScrollReveal().reveal('.intro-section h3, .intro-contact-container, .projects-section .project', { delay: 600, origin: 'left' });
+ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form, .projects-section .project-description', { delay: 400, origin: 'right' });
 ScrollReveal().reveal('.media-icons i', { delay: 400, origin: 'bottom', interval: 200 });
 ScrollReveal().reveal('.thanks-container h2, .thanks-container p, .thanks-button-container, .logo-contact-image', { delay: 300, origin: 'bottom', interval: 200 });
 ScrollReveal().reveal('.about-section h3', { delay: 500, origin: 'right' });
 ScrollReveal().reveal('.about-section p', { delay: 500, origin: 'left' });
 ScrollReveal().reveal('.projects-section .first-horizontal-line', { delay: 300, origin: 'left', distance: '300px', duration: 2000 });
 ScrollReveal().reveal('.projects-section .second-horizontal-line', { delay: 300, origin: 'right', distance: '300px', duration: 2000 });
-ScrollReveal().reveal('.projects-section .project, .projects-section p', { delay: 500, origin: 'bottom', interval: 400 });
 ScrollReveal().reveal('.projects-container .container-button, .skills-description', { delay: 600, origin: 'bottom' });
 ScrollReveal().reveal('.skills-container .experience h2', { delay: 500, origin: 'left', reset: false });
 ScrollReveal().reveal('.skills-container .skills h2', { delay: 500, origin: 'right', reset: false });
@@ -203,3 +202,30 @@ let yearElement = document.getElementById('year');
 let currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
 
+//#================================//
+//#          ARROW SECTION         //
+//#================================//
+let arrowUp = document.getElementById('arrow-container');
+
+window.onscroll = function() {
+  let scroll = document.documentElement.scrollTop;
+  
+  if(scroll > 600) {
+    arrowUp.style.transform = 'scale(1)';
+  } else {
+    arrowUp.style.transform = 'scale(0)';
+  }
+};
+
+//#================================//
+//#     WINDOW CHANGE EFFECT       //
+//#================================//
+let previousTitle = document.title;
+window.addEventListener('blur', () => {
+  previousTitle = document.title;
+  document.title = 'Don\'t go, come back please! 😃';
+});
+
+window.addEventListener('focus', () => {
+  document.title = previousTitle;
+});

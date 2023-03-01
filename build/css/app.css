@@ -332,6 +332,22 @@ body {
   overflow-x: hidden;
 }
 
+section[id=experience-container] {
+  scroll-margin: 20rem;
+}
+
+section[id=projects-container], section[id=about-container] {
+  scroll-margin: 15rem;
+}
+
+section[id=skills-container] {
+  scroll-margin: 12rem;
+}
+
+section[id=contact-container] {
+  scroll-margin: 15rem;
+}
+
 p {
   color: 900;
   font-size: 2rem;
@@ -351,6 +367,7 @@ a {
 
 img,
 picture {
+  font-family: "Montserrat", sans-serif;
   max-width: 100%;
   width: 100%;
   height: auto;
@@ -583,6 +600,42 @@ h4 {
     opacity: 0.1;
   }
 }
+.arrow-container {
+  position: fixed;
+  bottom: 3rem;
+  right: 5rem;
+  z-index: 999;
+  rotate: 180deg;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+.arrow-container:hover {
+  cursor: pointer;
+}
+
+#more-arrows {
+  animation: floating 1s infinite alternate;
+  transform: rotation(90deg);
+  width: 6rem;
+  height: 6rem;
+}
+#more-arrows polygon {
+  fill: #000000;
+  transition: all 0.2s ease-out;
+  scale: 0.75;
+}
+#more-arrows polygon.arrow-middle {
+  opacity: 0.75;
+}
+#more-arrows polygon.arrow-top {
+  opacity: 0.5;
+}
+
+@keyframes floating {
+  to {
+    margin-top: 2vh;
+  }
+}
 .header-content {
   width: 100%;
   height: 6rem;
@@ -606,6 +659,10 @@ h4 {
   display: flex;
   gap: 4rem;
   margin-right: 2rem;
+}
+.header-content .nav-bar a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 .header-content .nav-bar .underline {
   color: #000000;
@@ -648,6 +705,7 @@ h4 {
 .intro-section h3 {
   grid-row: 2/3;
   grid-column: 1/4;
+  font-family: "Montserrat", sans-serif;
 }
 .intro-section .intro-image {
   display: flex;
@@ -692,6 +750,9 @@ h4 {
 .projects-container {
   margin: 15rem auto;
 }
+.projects-container h2 {
+  margin-bottom: 15rem;
+}
 
 .projects-section {
   margin-bottom: 8rem;
@@ -710,19 +771,6 @@ h4 {
   background-color: #000000;
   grid-column: 1/3;
 }
-.projects-section p:nth-child(5) {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.projects-section a img {
-  border-radius: 1.2rem;
-}
-.projects-section a img:hover {
-  box-shadow: 0px 0px 50px rgb(0, 0, 0);
-}
-.projects-section a:nth-child(2) {
-  grid-column: 2/3;
-}
 .projects-section .project {
   border-radius: 1.2rem;
   width: 80%;
@@ -732,20 +780,66 @@ h4 {
   background-size: cover;
   margin-left: 10%;
 }
+.projects-section .project a img {
+  border-radius: 1.2rem;
+}
+.projects-section .project a img:hover {
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+}
+.projects-section div:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.projects-section .project-description h1 {
+  font-size: 2rem;
+}
+.projects-section .project-description .project-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.projects-section .project-description .project-tools img {
+  max-width: 7rem;
+  min-width: 3rem;
+  width: 75%;
+  height: auto;
+}
+.projects-section .project-description .project-tools img:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 0.3s;
+}
 
 .container-button {
   margin-bottom: 15rem;
 }
 
-.btn {
-  color: #ff9f43;
-  white-space: nowrap;
+.btn input {
+  margin-top: 5rem;
+  background: #ff9f43;
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: #000000;
+}
+.btn input:hover {
+  scale: 1.05;
+  transition: scale 0.2s;
+  cursor: pointer;
+}
+
+.experience-section {
+  margin: 25rem auto;
+}
+.experience-section h2 {
+  margin-bottom: 15rem;
 }
 
 .experience-container {
   display: flex;
   justify-content: center;
-  margin: 25rem auto;
 }
 .experience-container .job {
   width: 100%;
@@ -787,6 +881,7 @@ h4 {
 }
 .experience-container .description h4 {
   font-size: 2rem;
+  font-weight: 300;
 }
 .experience-container .description p {
   font-size: 1.5rem;
@@ -809,10 +904,15 @@ h4 {
 .skills-container .skills p, .skills-container .skills h2 {
   text-align: left;
 }
+.skills-container .skills h2 {
+  display: flex;
+}
 .skills-container .skills span:hover {
   color: #ff9f43;
-  transition: color 0.2s;
   cursor: default;
+  transition: color 0.2s, scale 0.2s, transform 0.2s;
+  scale: 1.8;
+  transform: translateY(-1rem);
 }
 .skills-container #myCanvasContainer canvas {
   aspect-ratio: auto 500/500;
@@ -918,6 +1018,7 @@ h4 {
   float: left;
   color: #000000;
   position: relative;
+  font-size: 4rem;
 }
 .contact-effect h1 span {
   position: absolute;
@@ -995,8 +1096,10 @@ h4 {
   gap: 4rem;
 }
 .footer-container-logos .footer-logos img {
-  width: 5rem;
-  height: 5rem;
+  max-width: 5rem;
+  min-width: 3rem;
+  width: 75%;
+  height: auto;
 }
 .footer-container-logos .footer-logos img:hover {
   cursor: pointer;

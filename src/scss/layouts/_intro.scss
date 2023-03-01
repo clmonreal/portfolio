@@ -19,6 +19,7 @@
     h3 {
         grid-row: 2 / 3;
         grid-column: 1 / 4;
+        font-family: $secondaryFont;
     }
 
     .intro-image {
@@ -26,7 +27,6 @@
         justify-content: center;
         grid-column: 3 / 4;
         transform: translateY(-2rem);
-        // transform: translateX(-5rem) translateY(-2rem);
         
         img {
             width: 60%;
@@ -43,11 +43,11 @@
             color: $orange;
             font-size: 4rem;
             transition: scale .5s;
-        }
-        i:hover {
-            scale: 1.2;
-        }
 
+            &:hover {
+                scale: 1.2;
+            }
+        }
     }
 }
 

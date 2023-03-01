@@ -90,7 +90,7 @@
         padding: 2rem;
         border-radius: 1rem;
         font-size: 2rem;
-
+        
         &:hover {
             scale: 1.05;
             transition: scale .2s;
@@ -106,11 +106,12 @@
     background: $orange;
     padding-left: 2rem;
     border-radius: 1.2rem;
-
+    
     h1 {
         float: left;
         color: $black;
         position: relative;
+        font-size: 4rem;
 
         span {
             position: absolute;

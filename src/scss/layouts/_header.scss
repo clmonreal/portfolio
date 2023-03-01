@@ -23,6 +23,11 @@
         gap: 4rem;
         margin-right: 2rem;
 
+        a {
+            font-family: $secondaryFont;
+            font-weight: $boldFont;
+        }
+
         .underline {
             color: $black;
             display: inline-block;

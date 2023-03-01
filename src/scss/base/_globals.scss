@@ -19,6 +19,19 @@ body {
     overflow-x: hidden;
 }
 
+section[id='experience-container'] {
+    scroll-margin: 20rem;
+}
+section[id='projects-container'], section[id='about-container'] {
+    scroll-margin: 15rem;
+}
+section[id='skills-container'] {
+    scroll-margin: 12rem;
+}
+section[id='contact-container'] {
+    scroll-margin: 15rem;
+}
+
 p {
     color: $blackFont;
     font-size: 2rem;
@@ -37,6 +50,7 @@ a {
 
 img,
 picture {
+    font-family: $secondaryFont;
     max-width: 100%;
     width: 100%;
     height: auto;

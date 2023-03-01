@@ -1,7 +1,14 @@
+.experience-section {
+    margin: 25rem auto;
+
+    h2 {
+        margin-bottom: 15rem;
+    }
+}
+
 .experience-container {
     display: flex;
     justify-content: center;
-    margin: 25rem auto;
     
     .job {
         width: 100%;
@@ -53,6 +60,7 @@
 
         h4 {
             font-size: 2rem;
+            font-weight: $thinFont;
         }
 
         p {

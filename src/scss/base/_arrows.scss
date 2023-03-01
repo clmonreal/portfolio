@@ -1,0 +1,41 @@
+.arrow-container {
+    position: fixed;
+    bottom: 3rem;
+    right: 5rem;
+    z-index: 999;
+    rotate: 180deg;
+    transform: scale(0);
+    transition: transform .5s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
+#more-arrows {
+    animation: floating 1s infinite alternate;
+    transform: rotation(90deg);
+    width: 6rem;
+    height: 6rem;
+
+    polygon {
+        fill: $black;
+        transition: all .2s ease-out;
+        scale: (.75);
+    
+        &.arrow-middle {
+            opacity: 0.75;
+        }
+    
+        &.arrow-top {
+            opacity: 0.5
+        }
+    }
+}
+
+@keyframes floating {
+    to {
+        margin-top: 2vh;
+    }
+}

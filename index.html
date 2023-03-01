@@ -44,17 +44,25 @@
         <div></div>
     </div>
 
+    <div class="arrow-container" id="arrow-container">
+        <a href="#" class="content">
+            <svg id="more-arrows">
+                <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 " />
+            </svg>
+        </a>
+    </div>
+
     <header>
         <nav class="header-content">
             <a href="#">
                 <img src="/src/img/logo.png" alt="Logo Image">
             </a>
             <div class="nav-bar">
-                <a class="underline" href="#">About</a>
-                <a class="underline" href="#">Projects</a>
-                <a class="underline" href="#">Experience</a>
-                <a class="underline" href="#">Skills</a>
-                <a class="underline" href="#">Contact</a>
+                <a class="underline" href="#about-container">About</a>
+                <a class="underline" href="#projects-container">Projects</a>
+                <a class="underline" href="#experience-container">Experience</a>
+                <a class="underline" href="#skills-container">Skills</a>
+                <a class="underline" href="#contact-container">Contact</a>
             </div>
         </nav>
     </header>
@@ -71,15 +79,14 @@
         </div>
         <h3>I enjoy coding and creating new projects</h3>
         <div class="media-icons">
-            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="icon"><i class="fab fa-github"></i></a>
-            <a href="#" class="icon"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/clmonreal/" class="icon" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="mailto:c.lopemonre@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
+            <a href="https://github.com/clmonreal" class="icon" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about-container">
         <div class="container">
             <h3>Hi, I'm Carlos. Nice to meet you.</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum incidunt optio unde
@@ -89,85 +96,111 @@
         </div>
     </section>
 
-    <section class="container projects-container">
+    <section class="container projects-container" id="projects-container">
+        <h2>My Best Projects</h2>
         <div class="projects-section">
             <div class="project">
-                <a href="#">
+                <a href="https://clmonreal.github.io/carlosProjectApp" target="_blank">
                     <img class="img" src="/src/img/project1.png" alt="First Project Image">
                 </a>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
-                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
-                deleniti porro temporibus.</p>
+            <div class="project-description">
+                <h1>Carlog - Carlos Project Application</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                    cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                    deleniti porro temporibus.</p>
+                <div class="project-tools">
+                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="Angular"><img src="/src/img/AngularImage.png" alt="Angular Image"></abbr>
+                </div>
+            </div>
             <hr class="first-horizontal-line">
             <div class="project">
-                <a href="#">
-                    <img class="img" src="/src/img/project1.png" alt="Second Project Image">
+                <a href="#" target="_blank">
+                    <img class="img" src="/src/img/project2.png" alt="Second Project Image">
                 </a>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
-                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
-                deleniti porro temporibus.</p>
+            <div class="project-description">
+                <h1>Real Estate Application</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                    cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                    deleniti porro temporibus.</p>
+                <div class="project-tools">
+                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="PHP"><img src="/src/img/PHPImage.png" alt="PHP Image"></abbr>
+                </div>
+            </div>
             <hr class="second-horizontal-line">
             <div class="project">
-                <a href="#">
-                    <img class="img" src="/src/img/project1.png" alt="Third Project Image">
+                <a href="https://festivalmusicacarlos18.netlify.app" target="_blank">
+                    <img class="img" src="/src/img/project3.png" alt="Third Project Image">
                 </a>
             </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
-                cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
-                deleniti porro temporibus.</p>
+            <div class="project-description">
+                <h1>Music Festival Application</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta odit corporis, vero harum dolorem
+                    cupiditate impedit soluta hic? Dolore beatae qui perspiciatis recusandae eos maxime similique cum
+                    deleniti porro temporibus.</p>
+                <div class="project-tools">
+                    <abbr title="HTML5"><img src="/src/img/htmlImage.png" alt="HTML Image"></abbr>
+                    <abbr title="SASS"><img src="/src/img/sassImage.png" alt="SASS Image"></abbr>
+                    <abbr title="JavaScript"><img src="/src/img/javascriptImage.png" alt="JavaScript Image"></abbr>
+                </div>
+            </div>
         </div>
         <div class="container-button">
-            <a href="#" class="btn first-btn">
-                <span>View All</span>
+            <a href="https://github.com/clmonreal?tab=repositories" class="btn first-btn" target="_blank">
+                <input type="submit" value="View All Projects"></input>
             </a>
         </div>
     </section>
 
-    <section class="container experience-container">
-        <div class="job">
-            <div class="graphic-view">
-                <div class="job-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
-                    </svg>
+    <section class="container experience-section" id="experience-container">
+        <h2>My Experience</h2>
+        <div class="experience-container">
+            <div class="job">
+                <div class="graphic-view">
+                    <div class="job-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <hr>
                 </div>
-                <hr>
-            </div>
-            <div class="description">
-                <h4>GNSS Academy</h4>
-                <p>January 2022 - June 2022</p>
-                <p>Trainee Software Developer</p>
-            </div>
-        </div>
-        <div class="job">
-            <div class="graphic-view">
-                <div class="job-logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
-                    </svg>
+                <div class="description">
+                    <h4>GNSS Academy</h4>
+                    <p>January 2022 - May 2022</p>
+                    <p>Trainee Software Developer</p>
                 </div>
-                <hr>
             </div>
-            <div class="description">
-                <h4>Indra Sistemas S.A.</h4>
-                <p>October 2022 - January 2023</p>
-                <p>Junior Software Engineer</p>
+            <div class="job">
+                <div class="graphic-view">
+                    <div class="job-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <hr>
+                </div>
+                <div class="description">
+                    <h4>Indra Sistemas S.A.</h4>
+                    <p>October 2022 - January 2023</p>
+                    <p>Junior Software Engineer</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="container skills-container">
+    <section class="container skills-container" id="skills-container">
         <div class="skills">
             <div class="skills-description">
-                <h2><span>T</span><span>h</span><span>e</span> <span>P</span><span>a</span><span>t</span><span>h</span>
-                    <span>o</span><span>f</span>
-                    <span>K</span><span>n</span><span>o</span><span>w</span><span>l</span><span>e</span><span>d</span><span>g</span><span>e</span>
+                <h2><span>T</span><span>h</span><span>e</span>&nbsp;<span>P</span><span>a</span><span>t</span><span>h</span>&nbsp;<span>o</span><span>f</span>&nbsp;<span>K</span><span>n</span><span>o</span><span>w</span><span>l</span><span>e</span><span>d</span><span>g</span><span>e</span>
                 </h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut minima accusantium nihil impedit quasi
                     nemo, fugit odit cumque deleniti fuga. Voluptates, amet! Dolores sequi porro, veritatis est sunt
@@ -207,7 +240,7 @@
         </div>
     </section>
 
-    <section class="container contact-container">
+    <section class="container contact-container" id="contact-container">
         <div class="logo-contact-image">
             <img src="/src/img/logo.png" alt="Logo Image">
         </div>
@@ -247,11 +280,10 @@
         </div>
         <p>You can also contact me through:</p>
         <div class="media-icons">
-            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="icon"><i class="fab fa-github"></i></a>
-            <a href="#" class="icon"><i class="fa fa-envelope"></i></a>
-            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/clmonreal/" class="icon" target="_blank"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="mailto:c.lopemonre@gmail.com" class="icon"><i class="fa fa-envelope"></i></a>
+            <a href="https://github.com/clmonreal" class="icon" target="_blank"><i class="fab fa-github"></i></a>
         </div>
     </section>
 
