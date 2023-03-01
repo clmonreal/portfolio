@@ -965,7 +965,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin: 5rem auto 15rem auto;
+  margin: 20rem auto 20rem auto;
 }
 
 .horizontal-line {
