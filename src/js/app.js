@@ -161,7 +161,7 @@ ScrollReveal().reveal('.skills-container .experience h2', { delay: 500, origin: 
 ScrollReveal().reveal('.skills-container .skills h2', { delay: 500, origin: 'right', reset: false });
 ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { delay: 600, origin: 'left' });
 ScrollReveal().reveal('.experience-container .description', { delay: 600, origin: 'right' });
-ScrollReveal().reveal('#myCanvasContainer, .about-section .CV-elements', { delay: 1000, distance: '0' });
+ScrollReveal().reveal('#myCanvasContainer, .about-section .CV-elements, .experience-section .experience-horizontal-divider', { delay: 1000, distance: '0' });
 ScrollReveal().reveal('.projects-container h2, .experience-section h2', { delay: 300, origin: 'bottom'});
 
 //#================================//
