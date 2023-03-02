@@ -23,12 +23,14 @@
         font-family: $secondaryFont;
         font-weight: $boldFont;
         color: $black;
+        white-space: nowrap;
     }
 
-    .nav-bar {
+    .nav-bar nav {
         display: flex;
         gap: 4rem;
         margin-right: 2rem;
+        list-style: none;
 
         a {
             font-family: $secondaryFont;

@@ -656,22 +656,24 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #000000;
+  white-space: nowrap;
 }
-.header-content .nav-bar {
+.header-content .nav-bar nav {
   display: flex;
   gap: 4rem;
   margin-right: 2rem;
+  list-style: none;
 }
-.header-content .nav-bar a {
+.header-content .nav-bar nav a {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.header-content .nav-bar .underline {
+.header-content .nav-bar nav .underline {
   color: #000000;
   display: inline-block;
   position: relative;
 }
-.header-content .nav-bar .underline::after {
+.header-content .nav-bar nav .underline::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -683,7 +685,7 @@ h4 {
   transform-origin: bottom right;
   transition: transform 0.4s ease-in-out;
 }
-.header-content .nav-bar .underline:hover::after {
+.header-content .nav-bar nav .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
