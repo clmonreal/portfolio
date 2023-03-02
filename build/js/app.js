@@ -198,6 +198,11 @@ async function handleSubmit(event) {
 //#================================//
 //#          FOOTER SECTION        //
 //#================================//
+document.getElementById('logo-container').addEventListener('click', scrollUp);
+
+//#================================//
+//#          FOOTER SECTION        //
+//#================================//
 let yearElement = document.getElementById('year');
 let currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
@@ -205,6 +210,17 @@ yearElement.textContent = currentYear;
 //#================================//
 //#          ARROW SECTION         //
 //#================================//
+//* Scroll Up
+document.getElementById('arrow-container').addEventListener('click', scrollUp);
+
+function scrollUp() {
+  let currentScroll = document.documentElement.scrollTop;
+  if(currentScroll > 0) {
+    window.scrollTo(0 , 0);
+  }
+}
+
+//* Scale Scroll Arrow 
 let arrowUp = document.getElementById('arrow-container');
 
 window.onscroll = function() {
@@ -218,7 +234,7 @@ window.onscroll = function() {
 };
 
 //#================================//
-//#     WINDOW CHANGE EFFECT       //
+//#   WINDOW CHANGE FOCUS EFFECT   //
 //#================================//
 let previousTitle = document.title;
 window.addEventListener('blur', () => {

@@ -336,16 +336,12 @@ section[id=experience-container] {
   scroll-margin: 20rem;
 }
 
-section[id=projects-container], section[id=about-container] {
+section[id=projects-container], section[id=about-container], section[id=contact-container] {
   scroll-margin: 15rem;
 }
 
 section[id=skills-container] {
   scroll-margin: 12rem;
-}
-
-section[id=contact-container] {
-  scroll-margin: 15rem;
 }
 
 p {
