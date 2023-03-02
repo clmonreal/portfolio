@@ -794,6 +794,16 @@ h4 {
   background: #ff9f43;
   padding: 10rem 20rem;
 }
+@media (max-width: 768px) {
+  .about-section {
+    padding: 10rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    padding: 5rem;
+  }
+}
 .about-section .CV-container {
   padding: 1rem 2rem;
   margin-top: 3rem;

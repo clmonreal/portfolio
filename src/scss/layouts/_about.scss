@@ -2,6 +2,14 @@
     background: $orange;
     padding: 10rem 20rem;
 
+    @include tablet {
+        padding: 10rem; 
+    }
+    
+    @include mobile{
+        padding: 5rem; 
+    }
+
     .CV-container {
         padding: 1rem 2rem;
         margin-top: 3rem;
