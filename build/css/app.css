@@ -948,18 +948,47 @@ h4 {
 .experience-section {
   margin: 25rem auto;
 }
+@media (max-width: 480px) {
+  .experience-section {
+    margin: 10rem auto;
+  }
+}
 .experience-section h2 {
   margin-bottom: 15rem;
+}
+@media (max-width: 768px) {
+  .experience-section h2 {
+    margin-bottom: 5rem;
+  }
 }
 
 .experience-container {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 480px) {
+  .experience-container hr {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .experience-container {
+    display: inline-block;
+  }
+}
 .experience-container .job {
   width: 100%;
+  height: auto;
   margin-right: 1.5rem;
   display: block;
+}
+@media (max-width: 480px) {
+  .experience-container .job {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 .experience-container .job .graphic-view {
   display: flex;
@@ -972,6 +1001,11 @@ h4 {
   border: none;
   background: #000000;
   margin-left: 1.5rem;
+}
+@media (max-width: 480px) {
+  .experience-container .job .graphic-view hr {
+    display: none;
+  }
 }
 .experience-container .job .graphic-view .job-logo {
   display: flex;
@@ -990,9 +1024,25 @@ h4 {
   float: left;
   margin-top: 1rem;
 }
-.experience-container .description h4, .experience-container .description p {
+@media (max-width: 480px) {
+  .experience-container .description {
+    display: block;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    float: none;
+  }
+}
+.experience-container .description h4,
+.experience-container .description p {
   text-align: left;
   margin: 0;
+}
+@media (max-width: 480px) {
+  .experience-container .description h4,
+  .experience-container .description p {
+    text-align: center;
+  }
 }
 .experience-container .description h4 {
   font-size: 2rem;
