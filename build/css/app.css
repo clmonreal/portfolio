@@ -1293,20 +1293,30 @@ h4 {
 .footer-container-logos p {
   white-space: nowrap;
 }
-.footer-container-logos .footer-logos {
+.footer-container-logos .footer-logos-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
 }
-.footer-container-logos .footer-logos img {
+.footer-container-logos .footer-logos-container img {
   max-width: 5rem;
   min-width: 3rem;
   width: 75%;
   height: auto;
 }
-.footer-container-logos .footer-logos img:hover {
+.footer-container-logos .footer-logos-container img:hover {
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .footer-container-logos .footer-logos-container {
+    display: block;
+  }
+}
+.footer-container-logos .footer-logos-container .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-container .last-sentence {
