@@ -1280,6 +1280,11 @@ h4 {
   font-size: 4rem;
   transition: scale 0.5s;
 }
+@media (max-width: 480px) {
+  .thanks-container .media-icons i {
+    font-size: 2.5rem;
+  }
+}
 .thanks-container .media-icons i:hover {
   scale: 1.2;
 }
