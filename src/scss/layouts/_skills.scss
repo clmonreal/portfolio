@@ -7,12 +7,28 @@
         text-align: center;
         align-items: center;
 
+        @include tablet {
+            display: block;
+        }
+
         p, h2 {
             text-align: left;
         }
 
         h2 {
             display: flex;
+            
+            span {
+                font-size: 4rem;
+
+                @include tablet {
+                    font-size: 3rem;
+                }
+
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
         }
 
         span:hover {

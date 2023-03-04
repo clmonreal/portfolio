@@ -1071,11 +1071,29 @@ h4 {
   text-align: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .skills-container .skills {
+    display: block;
+  }
+}
 .skills-container .skills p, .skills-container .skills h2 {
   text-align: left;
 }
 .skills-container .skills h2 {
   display: flex;
+}
+.skills-container .skills h2 span {
+  font-size: 4rem;
+}
+@media (max-width: 768px) {
+  .skills-container .skills h2 span {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .skills-container .skills h2 span {
+    font-size: 2rem;
+  }
 }
 .skills-container .skills span:hover {
   color: #ff9f43;
