@@ -1112,6 +1112,11 @@ h4 {
   gap: 2rem;
   margin: 20rem auto 20rem auto;
 }
+@media (max-width: 768px) {
+  .contact-container {
+    display: block;
+  }
+}
 
 .horizontal-line {
   display: flex;
@@ -1155,6 +1160,11 @@ h4 {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
+@media (max-width: 768px) {
+  .contact-form {
+    margin-top: 5rem;
+  }
+}
 .contact-form #name {
   grid-column: 1/2;
 }
@@ -1178,7 +1188,7 @@ h4 {
 }
 .contact-form textarea {
   height: 20rem;
-  max-width: 65rem;
+  max-width: 100%;
   min-height: 15rem;
   resize: vertical;
 }
@@ -1208,6 +1218,11 @@ h4 {
   color: #000000;
   position: relative;
   font-size: 4rem;
+}
+@media (max-width: 480px) {
+  .contact-effect h1 {
+    font-size: 3rem;
+  }
 }
 .contact-effect h1 span {
   position: absolute;

@@ -1,6 +1,10 @@
 .contact-container {
     @include grid(2, 2rem);
 
+    @include tablet {
+        display: block;
+    }
+
     // padding-bottom: 15rem;
     margin: 20rem auto 20rem auto;
 }
@@ -54,6 +58,10 @@
 
     @include grid(2, 1.5rem);
 
+    @include tablet {
+        margin-top: 5rem;
+    }
+
     #name {
         grid-column: 1 / 2;
     }
@@ -81,7 +89,7 @@
 
     textarea {
         height: 20rem;
-        max-width: 65rem;
+        max-width: 100%;
         min-height: 15rem;
         resize: vertical;
     }
@@ -114,6 +122,10 @@
         color: $black;
         position: relative;
         font-size: 4rem;
+
+        @include mobile {
+            font-size: 3rem;
+        }
 
         span {
             position: absolute;
