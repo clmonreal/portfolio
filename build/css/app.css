@@ -769,8 +769,7 @@ h4 {
   grid-column: 1/4;
 }
 .intro-section .media-icons i {
-  width: 0.05rem;
-  margin: 5rem;
+  margin: 2rem 5rem 5rem 5rem;
   color: #ff9f43;
   font-size: 4rem;
   transition: scale 0.5s;
