@@ -111,7 +111,7 @@
         p {
             font-size: 1.5rem;
 
-            &:last-child {
+            &:nth-child(2) {
                 font-weight: $boldFont;
             }
         }

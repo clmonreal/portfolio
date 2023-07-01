@@ -854,6 +854,7 @@ h4 {
 @media (max-width: 480px) {
   .intro-section .media-icons i {
     font-size: 2.5rem;
+    margin: 2rem 2rem 5rem 2rem;
   }
 }
 .intro-section .media-icons i:hover {
@@ -1132,7 +1133,7 @@ h4 {
 .experience-container .description p {
   font-size: 1.5rem;
 }
-.experience-container .description p:last-child {
+.experience-container .description p:nth-child(2) {
   font-weight: 700;
 }
 
