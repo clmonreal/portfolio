@@ -141,28 +141,30 @@ el3.addEventListener('mouseout', () => {
 //#   SCROLL REVEAL ALL SECTIONS   //
 //#================================//
 
-ScrollReveal({
-  reset: true,
-  distance: '60px',
-  duration: 2500,
-  delay: 400
-});
+if (window.innerWidth > 768) {
+  ScrollReveal({
+    reset: false,
+    distance: '60px',
+    duration: 2500,
+    delay: 200
+  });
 
-ScrollReveal().reveal('.intro-section h3, .intro-contact-container, .projects-section .project', { delay: 600, origin: 'left' });
-ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form, .projects-section .project-description', { delay: 400, origin: 'right' });
-ScrollReveal().reveal('.media-icons i', { delay: 400, origin: 'bottom', interval: 200 });
-ScrollReveal().reveal('.thanks-container h2, .thanks-container p, .thanks-button-container, .logo-contact-image', { delay: 300, origin: 'bottom', interval: 200 });
-ScrollReveal().reveal('.about-section h3', { delay: 500, origin: 'right' });
-ScrollReveal().reveal('.about-section .about-container-first-text', { delay: 500, origin: 'left' });
-ScrollReveal().reveal('.projects-section .first-horizontal-line', { delay: 300, origin: 'left', distance: '300px', duration: 2000 });
-ScrollReveal().reveal('.projects-section .second-horizontal-line', { delay: 300, origin: 'right', distance: '300px', duration: 2000 });
-ScrollReveal().reveal('.projects-container .container-button, .skills-description', { delay: 600, origin: 'bottom' });
-ScrollReveal().reveal('.skills-container .experience h2', { delay: 500, origin: 'left', reset: false });
-ScrollReveal().reveal('.skills-container .skills h2', { delay: 500, origin: 'right', reset: false });
-ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { delay: 600, origin: 'left' });
-ScrollReveal().reveal('.experience-container .description', { delay: 600, origin: 'right' });
-ScrollReveal().reveal('#myCanvasContainer, .about-section .CV-elements, .experience-section .experience-horizontal-divider', { delay: 1000, distance: '0' });
-ScrollReveal().reveal('.projects-container h2, .experience-section h2', { delay: 300, origin: 'bottom'});
+  ScrollReveal().reveal('.intro-section h3, .intro-contact-container, .projects-section .project', { origin: 'left', once: true });
+  ScrollReveal().reveal('.intro-section h1, .intro-section img, .contact-form, .projects-section .project-description', { origin: 'right', once: true });
+  ScrollReveal().reveal('.media-icons i', { origin: 'bottom', interval: 200, once: true });
+  ScrollReveal().reveal('.thanks-container h2, .thanks-container p, .thanks-button-container, .logo-contact-image', { origin: 'bottom', interval: 200, once: true });
+  ScrollReveal().reveal('.about-section h3', { origin: 'right', once: true });
+  ScrollReveal().reveal('.about-section .about-container-first-text', { origin: 'left', once: true });
+  ScrollReveal().reveal('.projects-section .first-horizontal-line', { origin: 'left', distance: '300px', duration: 2000, once: true });
+  ScrollReveal().reveal('.projects-section .second-horizontal-line', { origin: 'right', distance: '300px', duration: 2000, once: true });
+  ScrollReveal().reveal('.projects-container .container-button, .skills-description', { origin: 'bottom', once: true });
+  ScrollReveal().reveal('.skills-container .experience h2', { origin: 'left', reset: false, once: true });
+  ScrollReveal().reveal('.skills-container .skills h2', { origin: 'right', reset: false, once: true });
+  ScrollReveal().reveal('.experience-container .graphic-view, .skills-description h2', { origin: 'left', once: true });
+  ScrollReveal().reveal('.experience-container .description', { origin: 'right', once: true });
+  ScrollReveal().reveal('#myCanvasContainer, .about-section .CV-elements, .experience-section .experience-horizontal-divider', { distance: '0', once: true });
+  ScrollReveal().reveal('.projects-container h2, .experience-section h2', { origin: 'bottom', once: true });
+}
 
 //#================================//
 //#         CONTACT SECTION        //
@@ -182,14 +184,14 @@ async function handleSubmit(event) {
     }
   });
 
-  if(response.ok) {
+  if (response.ok) {
     const newElement = document.createElement("p");
     newElement.classList.add("popup-message");
     newElement.textContent = "The message has been sent successfully!";
     document.querySelector(".contact-form").appendChild(newElement);
     $form.reset();
 
-    setTimeout(function() {
+    setTimeout(function () {
       newElement.remove();
     }, 4000);
   }
@@ -215,18 +217,18 @@ document.getElementById('arrow-container').addEventListener('click', scrollUp);
 
 function scrollUp() {
   let currentScroll = document.documentElement.scrollTop;
-  if(currentScroll > 0) {
-    window.scrollTo(0 , 0);
+  if (currentScroll > 0) {
+    window.scrollTo(0, 0);
   }
 }
 
 //* Scale Scroll Arrow 
 let arrowUp = document.getElementById('arrow-container');
 
-window.onscroll = function() {
+window.onscroll = function () {
   let scroll = document.documentElement.scrollTop;
-  
-  if(scroll > 600) {
+
+  if (scroll > 600) {
     arrowUp.style.transform = 'scale(1)';
   } else {
     arrowUp.style.transform = 'scale(0)';
