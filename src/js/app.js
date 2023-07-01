@@ -2,16 +2,32 @@
 let mainLocation = window.pageXOffset;
 let $nav = document.querySelector('.header-content');
 
-window.addEventListener('scroll', function () {
-  let currentLocation = this.window.pageYOffset;
-  // console.log(currentLocation);
-  if (mainLocation >= currentLocation) {
-    $nav.style.top = '0';
-  } else {
-    $nav.style.top = '-70rem';
-  }
+if (window.innerWidth > 768) {
+  window.addEventListener('scroll', function () {
+    let currentLocation = this.window.pageYOffset;
+    // console.log(currentLocation);
+    if (mainLocation >= currentLocation) {
+      $nav.style.top = '0';
+    } else {
+      $nav.style.top = '-70rem';
+    }
 
-  mainLocation = currentLocation;
+    mainLocation = currentLocation;
+  });
+}
+
+// Obtén una referencia al checkbox mediante su ID
+const checkbox = document.getElementById('check');
+
+// Obtén una referencia a todos los enlaces del menú
+const menuLinks = document.querySelectorAll('.menu-link');
+
+// Agrega un controlador de eventos de clic a cada enlace del menú
+menuLinks.forEach(function (link) {
+  link.addEventListener('click', function () {
+    // Desmarca el checkbox al hacer clic en un enlace del menú
+    checkbox.checked = false;
+  });
 });
 
 //#================================//

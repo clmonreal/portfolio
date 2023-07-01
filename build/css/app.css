@@ -639,7 +639,7 @@ h4 {
 }
 .header-content {
   width: 100%;
-  height: 6rem;
+  height: 12rem;
   padding: 5rem;
   background-color: #ff9f43;
   display: flex;
@@ -651,15 +651,84 @@ h4 {
   z-index: 999;
   box-shadow: 0 0.2rem 1.5rem #333;
 }
+.header-content .nav-bar nav ul {
+  float: right;
+  margin-right: 2rem;
+}
+.header-content .nav-bar nav ul li {
+  display: inline-block;
+}
+.header-content .checkbtn {
+  float: right;
+  line-height: 8rem;
+  margin-right: 4rem;
+  margin-left: 2rem;
+  display: none;
+  scale: 1.4;
+}
+@media (max-width: 480px) {
+  .header-content .checkbtn {
+    margin-right: 2rem;
+  }
+}
+.header-content #check {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header-content .checkbtn {
+    display: block;
+    cursor: pointer;
+  }
+  .header-content .nav-bar nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #ff9f43;
+    top: 8rem;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .header-content .nav-bar nav ul li {
+    display: block;
+    margin: 2rem 0;
+    line-height: 3rem;
+  }
+  .header-content .nav-bar nav ul li a {
+    font-size: 2rem;
+  }
+  .header-content .nav-bar nav ul li a:hover, .header-content .nav-bar nav ul li a:active {
+    background: none;
+  }
+  .header-content #check:checked ~ .nav-bar nav ul {
+    left: 0;
+  }
+}
+.header-content .enlace {
+  position: absolute;
+  padding: 2rem 5rem;
+}
 @media (max-width: 992px) {
   .header-content {
-    display: block;
-    height: 30rem;
+    display: flex;
     padding: 2rem;
   }
 }
 .header-content #logo-container {
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .header-content #logo-container h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .header-content #logo-container {
+    text-align: left;
+  }
+  .header-content #logo-container h1 {
+    font-size: 3rem;
+  }
 }
 .header-content h1 {
   font-size: 4rem;
@@ -667,6 +736,13 @@ h4 {
   font-weight: 700;
   color: #000000;
   white-space: nowrap;
+}
+@media (max-width: 992px) {
+  .header-content h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+  }
 }
 .header-content .nav-bar nav {
   display: flex;
@@ -682,6 +758,7 @@ h4 {
   color: #000000;
   display: inline-block;
   position: relative;
+  margin-right: 2rem;
 }
 .header-content .nav-bar nav .underline::after {
   content: "";
@@ -719,7 +796,7 @@ h4 {
 }
 @media (max-width: 992px) {
   .intro-section {
-    margin: 46% auto;
+    margin: 26% auto;
   }
 }
 @media (max-width: 768px) {
@@ -728,7 +805,7 @@ h4 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 40rem auto 5rem auto;
+    margin: 16rem auto 5rem auto;
   }
   .intro-section .intro-image picture {
     display: block;
