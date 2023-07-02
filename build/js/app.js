@@ -72,86 +72,89 @@ let string2 = `
         rotateX(0)
         rotateY(0)
     `
-el1.addEventListener('mousemove', (evt) => {
 
-  const { layerX, layerY } = evt;
+if (window.innerWidth > 768) {
+  el1.addEventListener('mousemove', (evt) => {
 
-  yRotation1 = (
-    (layerX - width / 2) / width
-  ) * 20;
+    const { layerX, layerY } = evt;
 
-  xRotation1 = (
-    (layerY - height / 2) / height
-  ) * 20;
+    yRotation1 = (
+      (layerX - width / 2) / width
+    ) * 20;
 
-  string1 = `
+    xRotation1 = (
+      (layerY - height / 2) / height
+    ) * 20;
+
+    string1 = `
         perspective(500px)
         scale(1.1)
         rotateX(${xRotation1}deg)
         rotateY(${yRotation1}deg)
     `
 
-  el1.style.transform = string1;
-});
+    el1.style.transform = string1;
+  });
 
-el1.addEventListener('mouseout', () => {
+  el1.addEventListener('mouseout', () => {
 
 
 
-  el1.style.transform = string2;
-});
+    el1.style.transform = string2;
+  });
 
-const el2 = document.getElementsByClassName('img')[1];
-el2.addEventListener('mousemove', (evt) => {
-  const { layerX, layerY } = evt;
+  const el2 = document.getElementsByClassName('img')[1];
+  el2.addEventListener('mousemove', (evt) => {
+    const { layerX, layerY } = evt;
 
-  yRotation1 = (
-    (layerX - width / 2) / width
-  ) * 20;
+    yRotation1 = (
+      (layerX - width / 2) / width
+    ) * 20;
 
-  xRotation1 = (
-    (layerY - height / 2) / height
-  ) * 20;
+    xRotation1 = (
+      (layerY - height / 2) / height
+    ) * 20;
 
-  string1 = `
+    string1 = `
         perspective(500px)
         scale(1.1)
         rotateX(${xRotation1}deg)
         rotateY(${yRotation1}deg)
     `
 
-  el2.style.transform = string1;
-});
+    el2.style.transform = string1;
+  });
 
-el2.addEventListener('mouseout', () => {
-  el2.style.transform = string2;
-});
+  el2.addEventListener('mouseout', () => {
+    el2.style.transform = string2;
+  });
 
-const el3 = document.getElementsByClassName('img')[2];
-el3.addEventListener('mousemove', (evt) => {
-  const { layerX, layerY } = evt;
+  const el3 = document.getElementsByClassName('img')[2];
+  el3.addEventListener('mousemove', (evt) => {
+    const { layerX, layerY } = evt;
 
-  yRotation1 = (
-    (layerX - width / 2) / width
-  ) * 20;
+    yRotation1 = (
+      (layerX - width / 2) / width
+    ) * 20;
 
-  xRotation1 = (
-    (layerY - height / 2) / height
-  ) * 20;
+    xRotation1 = (
+      (layerY - height / 2) / height
+    ) * 20;
 
-  string1 = `
+    string1 = `
         perspective(500px)
         scale(1.1)
         rotateX(${xRotation1}deg)
         rotateY(${yRotation1}deg)
     `
 
-  el3.style.transform = string1;
-});
+    el3.style.transform = string1;
+  });
 
-el3.addEventListener('mouseout', () => {
-  el3.style.transform = string2;
-});
+  el3.addEventListener('mouseout', () => {
+    el3.style.transform = string2;
+  });
+}
 
 //#================================//
 //#   SCROLL REVEAL ALL SECTIONS   //
