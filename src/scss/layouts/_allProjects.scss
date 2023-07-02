@@ -10,7 +10,7 @@
     }
 }
 
-.projects-container {
+.all-projects-container {
 	margin: 15rem auto;
 
 	h2 {
@@ -43,7 +43,7 @@
 		grid-column: 1 / 3;
 	}
 
-	.project {
+	.all-project {
 		border-radius: 1.2rem;
 		width: 80%;
 		height: auto;
@@ -72,7 +72,7 @@
 		
 	}
 
-	.project-description {
+	.all-project-description {
 
 		h1 {
 			font-size: 2rem;
@@ -89,7 +89,7 @@
 			margin-bottom: 2rem;
 		}
 
-		.project-tools {
+		.all-project-tools {
 			display: flex;
 			justify-content: center;
 			align-items: center;
