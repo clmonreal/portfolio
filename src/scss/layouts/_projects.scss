@@ -10,6 +10,13 @@
 	}
 }
 
+.project-aux#project-index {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+}
+
+
+
 .projects-section {
 	margin-bottom: 8rem;
 	display: flex;
@@ -51,18 +58,13 @@
 				@include mobile {
 					margin-bottom: 2rem;
 				}
-	
+
 				&:hover {
 					box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
 				}
 			}
 		}
-		
-	}
 
-	div:nth-child(4) {
-		grid-column: 2 / 3;
-		grid-row: 3 / 4;
 	}
 
 	.project-description {
@@ -87,13 +89,13 @@
 			justify-content: center;
 			align-items: center;
 			gap: 4rem;
-	
+
 			img {
 				max-width: 7rem;
 				min-width: 3rem;
 				width: 75%;
 				height: auto;
-				
+
 				&:hover {
 					cursor: pointer;
 					scale: 1.2;
