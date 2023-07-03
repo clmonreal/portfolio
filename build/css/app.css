@@ -932,6 +932,16 @@ h4 {
   grid-row: 3/4;
 }
 
+.projects-image {
+  transition: all 0.2s;
+}
+.projects-image:hover {
+  scale: 1.02;
+}
+.projects-image:not(:hover) {
+  scale: 1;
+}
+
 .projects-section {
   margin-bottom: 8rem;
   display: flex;

@@ -15,7 +15,17 @@
 	grid-row: 3 / 4;
 }
 
+.projects-image {
+	transition: all .2s;
 
+	&:hover {
+		scale: 1.02;
+	}
+
+	&:not(:hover) {
+		scale: 1
+	}
+}
 
 .projects-section {
 	margin-bottom: 8rem;
