@@ -95,10 +95,12 @@
 		}
 
 		.project-tools {
+
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			gap: 4rem;
+			flex-wrap: wrap; 
 
 			img {
 				max-width: 7rem;
@@ -111,6 +113,10 @@
 					scale: 1.2;
 					transition: scale .3s;
 				}
+			}
+
+			@include mobile {
+
 			}
 		}
 	}

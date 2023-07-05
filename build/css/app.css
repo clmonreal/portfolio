@@ -1006,6 +1006,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  flex-wrap: wrap;
 }
 .projects-section .project-description .project-tools img {
   max-width: 7rem;
@@ -1018,7 +1019,6 @@ h4 {
   scale: 1.2;
   transition: scale 0.3s;
 }
-
 .container-button {
   margin-bottom: 15rem;
 }
